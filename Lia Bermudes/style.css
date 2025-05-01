@@ -1,0 +1,117 @@
+*{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --bg-color: #100A05;
+    --letter-color: #fff;
+    --bg-header-color: #00000860;
+    --bg-header-color-hover: #FFD007;
+}
+
+body{
+    background-color: var(--bg-color);
+    font-family: sans-serif;
+}
+
+/**Seccion del encabezado**/
+.header{
+    background-image: url('/Pagina WEB camlb/img/Background-Base.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 800px;
+    position: relative;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header__logo{
+    position: absolute;
+    margin-left: 1000px;
+
+}
+
+.header__logo img{
+    height: 100px;
+    width: 200px;
+}
+
+.header__overlay-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    white-space: pre;
+}
+
+@font-face {
+    font-family: 'MiFuente';
+    src: url('/Pagina WEB camlb/Fonts/TAN_Meringue/TAN MERINGUE.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.titulo{
+    margin-left: 85px;
+    margin-top: 40px;
+    font-size: 45px;
+    font-family: 'MiFuente';
+}
+
+strong{
+    font-size: 70px;
+}
+
+.header_overlay{
+position: relative;
+z-index: 2;
+}
+
+.header_overlay{
+    height: 100%;
+    width: 100%;
+    padding: 30px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between  ;
+}
+
+.header__nav{
+    margin-top: 700px;
+    
+}
+
+.header__nav-list{ 
+    list-style: none;
+    display: flex;
+    gap: 20px;;
+}
+
+.header__nav-item a{
+    text-decoration: none;
+    color: var(--letter-color);
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    padding: 10px;
+    border-radius: 25px;
+}
+.header__nav-item a:hover{
+    transition: all 0.5s ease-in-out;
+    background-color: var(--bg-header-color-hover);
+    border-radius: 25px;
+}
+
+/**Fin de la seccion e encabezado**/
+
+/**Seccion e Main**/
+
+
