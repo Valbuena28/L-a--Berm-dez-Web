@@ -18,7 +18,7 @@ body{
 
 /**Seccion del encabezado**/
 .header{
-    background-image: url('/Pagina WEB camlb/img/Background-Base.png');
+    background-image: url('/Lia Bermudes/img/Background-Base.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -55,7 +55,7 @@ body{
 
 @font-face {
     font-family: 'MiFuente';
-    src: url('/Pagina WEB camlb/Fonts/TAN_Meringue/TAN MERINGUE.ttf') format('truetype');
+    src: url('/Lia Bermudes/Fonts/TAN_Meringue/TAN MERINGUE.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
