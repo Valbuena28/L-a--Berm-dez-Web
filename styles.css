@@ -1,0 +1,825 @@
+/* Reset y estilos base para todos los elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales para el cuerpo de la página */
+body {
+    font-family: Arial; /* Fuente legible y común */
+    background-color: #000; /* Fondo negro */
+    color: #000; /* Texto negro */
+    line-height: 1.6; /* Altura de línea para mejor lectura */
+    /* Removed min-height: 200vh to allow footer positioning */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    overflow-y: auto; /* Allow vertical scrolling */
+    position: relative;
+    z-index: 0;
+}
+main {
+    flex-grow: 1;
+}
+
+/**Estilos de la pantalla con el nombre del Lia Bermudez**/
+.lia-bermudez {
+    font-size: 4.5rem;
+    font-weight: bold;
+}
+  /* Ensure intro-video section and children are flush to top */
+  #intro-video, #intro-video .slideshow-background, #intro-video .slideshow, #intro-video .overlay, #intro-video h1.intro-title {
+    margin: 0;
+    padding: 0;
+}
+/* Make intro-video height fit viewport minus header */
+#intro-video {
+    height: calc(100vh - 75px);
+    overflow: hidden;
+    position: relative;
+}
+#intro-video .slideshow-background {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+#intro-video .slideshow {
+    height: 100%;
+    width: 100%;
+}
+#intro-video .slideshow img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+#intro-video .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.3);
+}
+#intro-video h1.intro-title {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    color: white;
+    font-size: 3.5rem;
+    z-index: 11;
+    margin: 0;
+    padding: 20px 0;
+    max-width: none;
+    box-sizing: border-box;
+    text-align: left;
+    background-color: transparent;
+}
+#intro-video .intro-title-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 40vw;
+    padding-left: 1rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/**Fin de lso estilos de la pantalla con el nombre del Lia Bermuddez**/
+
+
+/**todo sobre el header**/
+/* Estilos generales del encabezado */
+.header {
+    background-color: #000000; /* Color de fondo del encabezado */
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2); /* Sombra para el encabezado */
+    padding: 5px; /* Espaciado interno */
+    width: 100%;
+    display: flex; /* Usar flexbox para alinear elementos */
+    justify-content: space-between; /* Espacio entre logo y menú */
+    align-items: center; /* Centrar verticalmente */
+    position: sticky; /* Fijar el encabezado en la parte superior */
+    top: 0; /* Alinear al borde superior */
+    z-index: 20;
+}
+
+
+/* Estilos del logo */
+.logo img {
+    max-width: 150px; /* Ancho máximo del logo */
+}
+
+/* Estilos del menú de navegación */
+.nav-menu {
+    position: relative; /* Posicionamiento relativo para el menú desplegable */
+    margin: auto;
+}
+
+.nav-list {
+    list-style: none; /* Quitar viñetas de la lista */
+    display: flex; /* Usar flexbox para alinear los elementos del menú */
+    
+}
+.dropdown-menu li{
+    list-style: none;
+}
+
+.nav-item {
+    position: relative; /* Posicionamiento relativo para los elementos del menú */
+    margin: 0 15px; /* Espaciado entre elementos del menú */
+}
+
+.nav-link {
+    color: #ecf0f1; /* Color del texto del menú */
+    text-decoration: none; /* Quitar subrayado */
+    padding: 10px 15px; /* Espaciado interno */
+    transition: background-color 0.3s; /* Transición suave para el fondo */
+    border-radius: 25px;
+}
+
+.nav-link:hover {
+    background-color: #ffee00bd; /* Color de fondo al pasar el mouse */
+    color: #000;
+    border-radius: 25px; /* Bordes redondeados */
+}
+
+/* Estilos para el menú desplegable */
+.dropdown-menu {
+    display: none; /* Ocultar el menú desplegable por defecto */
+    position: absolute; /* Posicionamiento absoluto */
+    top: 32px; /* Colocar debajo del elemento padre */
+    left: 0; /* Alinear a la izquierda */
+    background-color: #ffee00bd; /* Color de fondo del menú desplegable */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra para el menú */
+    z-index: 10; /* Asegurarse de que esté por encima de otros elementos */
+    padding: 5px;
+}
+
+.nav-item:hover .dropdown-menu {
+    display: block; /* Mostrar el menú desplegable al pasar el mouse */
+}
+
+.dropdown-link {
+    color: #000000; /* Color del texto del enlace del menú desplegable */
+    text-decoration: none; /* Quitar subrayado */
+    display: block; /* Hacer que el enlace ocupe todo el ancho */
+    padding: 10px 15px; /* Espaciado interno */
+    transition: background-color 0.3s; /* Transición suave para el fondo */
+    border-radius: 10px;
+}
+
+.dropdown-link:hover {
+    background-color: #00000081; /* Color de fondo al pasar el mouse */
+    color: #fff;
+    border-radius: 10px;
+}
+
+/* Estilos para las secciones generales */
+.section {
+    padding: 40px 20px;
+    border-bottom: 1px solid #ccc; /* Línea divisoria */
+}
+
+/* Title inside intro section */
+.intro-title {
+    font-size: 2.5rem;
+    margin: 20px 0 20px 0;
+    font-weight: bold;
+    order: -1; /* Ensure title is visually above slideshow in flex layout */
+    width: 100%;
+    z-index: 10;
+    position: relative;
+    background-color: rgba(0,0,0,0.5);
+    padding: 10px 0;
+}
+
+/* Slideshow background container */
+.slideshow-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.slideshow-background .slideshow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.slideshow-background .slideshow img.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    z-index: 0;
+}
+
+.slideshow-background .slideshow img.slide.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+/* Overlay for darkening background images for text readability */
+.slideshow-background .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    z-index: 1;
+}
+
+/* Intro video section adjustments */
+.intro-video {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    background-color: #000;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+   /* Styles for navigation dots */
+   .dots {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 20;
+}
+.dot {
+    display: block;
+    width: 12px;
+    height: 12px;
+    margin: 8px 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.dot.active {
+    background-color: white;
+}
+
+/* Title styling */
+.intro-title {
+    position: relative;
+    z-index: 2;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 1045px) {
+      /* Ajustes para el header */
+      .nav-list {
+        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+        display: none;
+    }
+
+    .nav-item {
+        margin: 10px 0; /* Espaciado vertical entre elementos */
+    }
+
+    .nav-menu.active .nav-list {
+        display: flex; /* Mostrar el menú en pantallas pequeñas cuando está activo */
+    }
+    
+}
+@media (max-width: 768px) {
+  
+   
+    /* Ajustes para el footer */
+    .footer {
+        flex-direction: column;
+        padding: 20px 10px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* Ajustes para el calendario */
+    .calendar,
+    .event-list,
+    .event-details {
+        max-width: 100%;
+        margin: 10px 0;
+    }
+
+    .intro-title {
+        font-size: 1.8rem;
+        margin: 15px 0 8px 0;
+    }
+    .slideshow {
+        height: calc(100vh - 120px);
+    }
+}
+
+/* Estilos para la sección Calendario de Actividades */
+.calendario {
+    padding: 20px;
+    background-color: #000; /* Fondo negro */
+    color: #fff; /* Texto blanco */
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: none !important;
+}
+
+.calendario .section {
+    border-bottom: none !important;
+}
+
+.footer {
+    padding-top: 20px;
+    margin-top: 0;
+}
+.section h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
+}
+.calendario h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+/* Grid para mostrar eventos */
+.eventos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Columnas responsivas */
+    gap: 20px; /* Espacio entre eventos */
+}
+
+/* Estilos para cada evento individual */
+.evento {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.3s ease;
+}
+
+.evento:hover,
+.evento:focus {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    outline: none;
+}
+
+.evento img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+/* Información básica del evento */
+.evento-info {
+    padding: 10px;
+    flex-grow: 1;
+}
+
+.evento-info h3 {
+    margin-bottom: 5px;
+    color: #000;
+    text-align: center;
+}
+
+.evento-info p {
+    font-size: 0.9rem;
+    color: #333;
+}
+
+/* Botón "Ver más" para mostrar detalles */
+.btn-detalle {
+    margin: 10px auto 0 auto; /* Centrado horizontal */
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+}
+
+.btn-detalle:hover {
+    background-color: #444;
+}
+
+/* Detalle del evento desplegable */
+.evento-detalle {
+    display: none; /* Oculto por defecto */
+    padding: 10px;
+    background-color: #eee;
+    border-top: 1px solid #ccc;
+    font-size: 0.9rem;
+    color: #222;
+}
+
+.evento-detalle p {
+    margin-bottom: 10px;
+}
+
+/* Botón "Cerrar" dentro del detalle */
+.btn-cerrar {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 10px auto 0 auto; /* Centrado horizontal */
+}
+
+.btn-cerrar:hover {
+    background-color: #444;
+}
+
+
+/* Footer multi-column layout */
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: #000; /* Fondo negro */
+    color: #fff;
+    padding: 40px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    font-size: 0.9rem;
+}
+
+/* Background and text color for Eventos y Actividades Pasadas main section */
+body.eventos-actividades-pasadas main {
+    background-color: #000;
+    color: #fff;
+    padding: 40px 20px;
+}
+
+/* Background and text color for Contacto section in footer */
+.footer-section.contact-info {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1 1 200px;
+    margin: 10px;
+}
+.footer-section h3 {
+    text-align: center;
+}
+.footer-section.contact-info h3 {
+    margin-top: -20px;
+}
+
+.footer-section h3 {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    border-bottom: 2px solid #555;
+    padding-bottom: 5px;
+}
+
+.footer-section p,
+.footer-section ul,
+.footer-section iframe {
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #ccc;
+}
+
+/* Social media icons */
+.footer-section.social-media {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer-section.social-media a {
+    display: inline-block;
+    margin: 0 7.5px;
+}
+.footer-section.social-media a:first-child {
+    margin-left: 0;
+}
+.footer-section.social-media a:last-child {
+    margin-right: 0;
+}
+.footer-section.social-media {
+    text-align: center;
+}
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+.social-icons a {
+    display: inline-block;
+}
+
+.footer-section.social-media a {
+    display: inline-block;
+}
+
+.footer-section.social-media img {
+    width: 32px;
+    height: 32px;
+    /* Removed filter to ensure icons are visible */
+    filter: none;
+    transition: filter 0.3s ease;
+}
+
+.footer-section.social-media a[aria-label="Twitter"] img {
+    filter: none;
+}
+
+.footer-section.social-media a:hover img {
+    filter: brightness(0) invert(0.7);
+}
+
+/* Map iframe */
+.footer-section.map {
+    text-align: center;
+}
+.footer-section.map iframe {
+    border-radius: 8px;
+    border: none;
+    display: inline-block;
+    margin: 0 auto;
+}
+
+
+/* Botón para volver arriba */
+#scrollTopBtn {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    bottom: 70px;
+    right: 20px;
+    z-index: 9999;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    pointer-events: auto;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    
+}
+
+/* White text color for pages with class white-text-page */
+body.white-text-page {
+    color: #fff;
+}
+
+#scrollTopBtn:hover {
+    background-color: #444;
+}
+
+#scrollTopBtn:hover {
+    background-color: #444;
+}
+
+
+
+/* Simple calendar styles */
+.calendar {
+    max-width: 90%;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    background: #fafafaab;
+    backdrop-filter: blur(10px);
+    
+}
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.calendar-header button {
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(0, 250px));
+    gap: 10px;
+    justify-content: center;
+    
+}
+
+.event-box {
+    background-color: #222;
+    border: 1px solid #444;
+    border-radius: 6px;
+    width: 100%;
+    padding: 15px;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    box-sizing: border-box;
+}
+.event-box:hover {
+    background-color: #444;
+}
+.event-box img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 12px;
+}
+.event-box h3 {
+    margin: 0;
+    font-size: 1.3rem;
+}
+.calendar-day {
+    text-align: center;
+    font-weight: bold;
+    padding: 8px 0;
+    background: #eee;
+    border-radius: 4px;
+    font-size: 1.1em;
+}
+.calendar-date {
+    height: 110px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 8px;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+.calendar-date.today {
+    background: #000;
+    color: #fff;
+}
+.day-number {
+    font-weight: bold;
+    font-size: 1.4em;
+}
+.event-indicator {
+    width: 10px;
+    height: 10px;
+    background: #f00;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+}
+.event-list {
+    max-width: 900px;
+    margin: 20px auto;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+}
+.event-item {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+    cursor: pointer;
+    font-size: 1em;
+}
+.event-item:last-child {
+    border-bottom: none;
+}
+.event-item:hover {
+    background: #f0f0f0;
+}
+.event-details {
+    max-width: 900px;
+    margin: 20px auto;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    display: none;
+    position: relative;
+    text-align: center;
+}
+.event-image {
+    max-width: 100%;
+    max-height: 250px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    object-fit: cover;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.event-title {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.event-info {
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto 20px auto;
+    font-size: 1.1em;
+    line-height: 1.4;
+}
+.ver-mas-btn {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1.1em;
+    display: block;
+    margin: 0 auto;
+}
+
+
