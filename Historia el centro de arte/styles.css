@@ -1,0 +1,640 @@
+
+/* Reset y estilos base para todos los elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales para el cuerpo de la página */
+body {
+    font-family: Arial; /* Fuente legible y común */
+    background-color: #000; /* Fondo negro */
+    color: #000; /* Texto negro */
+    line-height: 1.6; /* Altura de línea para mejor lectura */
+    /* Removed min-height: 200vh to allow footer positioning */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    overflow-y: auto; /* Allow vertical scrolling */
+    position: relative;
+    z-index: 0;
+}
+main {
+    flex-grow: 1;
+}
+
+
+/**ENCABESADO**/
+.header {
+    background-color: #000000; /* Color de fondo del encabezado */
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2); /* Sombra para el encabezado */
+    padding: 5px; /* Espaciado interno */
+    width: 100%;
+    display: flex; /* Usar flexbox para alinear elementos */
+    justify-content: space-between; /* Espacio entre logo y menú */
+    align-items: center; /* Centrar verticalmente */
+    position: sticky; /* Fijar el encabezado en la parte superior */
+    top: 0; /* Alinear al borde superior */
+    z-index: 20;
+}
+
+/* Estilos del logo */
+.logo img {
+    max-width: 150px; /* Ancho máximo del logo */
+}
+
+/* Estilos del menú de navegación */
+.nav-menu {
+    position: relative; /* Posicionamiento relativo para el menú desplegable */
+    margin: auto;
+}
+
+.nav-list {
+    list-style: none; /* Quitar viñetas de la lista */
+    display: flex; /* Usar flexbox para alinear los elementos del menú */
+    
+}
+.dropdown-menu li{
+    list-style: none;
+}
+
+.nav-item {
+    position: relative; /* Posicionamiento relativo para los elementos del menú */
+    margin: 0 15px; /* Espaciado entre elementos del menú */
+}
+
+.nav-link {
+    color: #ecf0f1; /* Color del texto del menú */
+    text-decoration: none; /* Quitar subrayado */
+    padding: 10px 15px; /* Espaciado interno */
+    transition: background-color 0.3s; /* Transición suave para el fondo */
+    border-radius: 25px;
+}
+
+.nav-link:hover {
+    background-color: #ffee00bd; /* Color de fondo al pasar el mouse */
+    color: #000;
+    border-radius: 25px; /* Bordes redondeados */
+}
+
+/* Estilos para el menú desplegable */
+.dropdown-menu {
+    display: none; /* Ocultar el menú desplegable por defecto */
+    position: absolute; /* Posicionamiento absoluto */
+    top: 32px; /* Colocar debajo del elemento padre */
+    left: 0; /* Alinear a la izquierda */
+    background-color: #ffee00bd; /* Color de fondo del menú desplegable */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra para el menú */
+    z-index: 10; /* Asegurarse de que esté por encima de otros elementos */
+    padding: 5px;
+}
+
+.nav-item:hover .dropdown-menu {
+    display: block; /* Mostrar el menú desplegable al pasar el mouse */
+}
+
+.dropdown-link {
+    color: #000000; /* Color del texto del enlace del menú desplegable */
+    text-decoration: none; /* Quitar subrayado */
+    display: block; /* Hacer que el enlace ocupe todo el ancho */
+    padding: 10px 15px; /* Espaciado interno */
+    transition: background-color 0.3s; /* Transición suave para el fondo */
+    border-radius: 10px;
+}
+
+.dropdown-link:hover {
+    background-color: #00000081; /* Color de fondo al pasar el mouse */
+    color: #fff;
+    border-radius: 10px;
+}
+
+/**COLOCA AQUI EL ESTILO DEL MAIN**/
+
+.first-box{ /* Esta clase representa la caja principal de todo el contenido */
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    color: white;
+    height: 120vh;
+    width: 98.87vw;
+}
+
+.first-box-content{ /* Este es la primera caja de contenido llamada Figura Juridica */
+    display: flex;
+    flex-direction: column;
+    background-color: #2b1a0150;
+    height: 100%;
+    width: 100%;
+}
+
+.first-box-content p{ /*Primera caja para darle estilo al parrafo*/
+    margin-top: 4rem;
+    font-size: 0.8rem;
+}
+
+.first-box-img{ /* Primera para darle estilo a la imagen */
+    position: absolute;
+    max-width: 100%;
+    height: 20%;
+    width: 30%;
+    right: 0;
+    bottom: 52%;
+}
+
+.second-box-content{  /* Segunda caja de contenido llamada Areas */
+    display: flex;
+    flex-direction: column;
+    background-color: #2b1a01d8;
+    height: 100%;
+    width: 100%;
+
+}
+
+.box-section{ /* llamada asi por que es una caja que contiene 4 cajas mas que que se separan entre si */
+    display: flex;
+    justify-content: center;
+    padding-top: 5rem;
+    padding-right: 3.2rem;
+}
+
+.section{ /* Clase que le da estilos interactivos a las 4 cajas de Areas */
+    display: flex;
+    height: 57vh;
+    width: 15vw;
+    margin-left: 2rem;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+    position: relative;
+    transition: background 0.6s ease-in-out, transform 0.6s ease-in-out;
+    cursor: pointer;
+}
+
+.enlace-area{ /* Clase que le da estilo a los enlaces Clase que pone un efecto de gradiente a las cajas ademas de colocar su imagen de fondo */
+    color: white;
+    text-decoration: none;
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    transition: transform 0.3s, color 0.3s;
+    text-overflow: ellipsis;
+}
+
+
+.third-box-content{ /* Tercera caja de contenido llamada Etapas */
+    display: flex;
+    flex-direction: column;
+    background-color: #2b1a016e;
+    height: 100%;
+    width: 100%;
+}
+
+.box-section-etapas{ /* Caja que contiene 3 cajas mas para posicionarlas y se separen entre si */
+    display: flex;
+    justify-content: center;
+    padding-top: 5rem;
+    padding-right: 3.2rem;
+}
+
+.section-etapas{ /* Clase que le da estilos interactivos a las cajas de Etapas */
+    display: flex;
+    height: 57vh;
+    width: 20vw;
+    margin-left: 2rem;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+    position: relative;
+    transition: background 0.6s ease-in-out, transform 0.6s ease-in-out;
+    cursor: pointer;
+    
+}
+
+
+
+.img1{ /* Clase que pone un efecto de gradiente a las cajas ademas de colocar su imagen de fondo */
+    background: linear-gradient(to top, rgba(255, 196, 2, 0.5) 10%, transparent 30%), 
+    url('/imagenes/10.jpg') center/cover no-repeat;
+}
+
+.img1:hover{ /* Clase que pone un efecto al pasar el mouse para que cresca el gradiente y su escala sea mayor*/
+    background: linear-gradient(to top, rgba(255,196,2,0.7) 0, transparent 60%),
+    url('/imagenes/10.jpg') center/cover no-repeat;
+    transform: scale(1.1);
+}
+
+.img2{ /* Clase que pone un efecto de gradiente a las cajas ademas de colocar su imagen de fondo */
+    background: linear-gradient(to top, rgba(255, 196, 2, 0.5) 10%, transparent 30%), 
+    url('/imagenes/11.webp') center/cover no-repeat;
+}
+
+.img2:hover{ /* Clase que pone un efecto al pasar el mouse para que cresca el gradiente y su escala sea mayor*/
+    background: linear-gradient(to top, rgba(255,196,2,0.7) 0, transparent 60%),
+    url('/imagenes/11.webp') center/cover no-repeat;
+    transform: scale(1.1);
+}
+
+
+.img3{ /* Clase que pone un efecto de gradiente a las cajas ademas de colocar su imagen de fondo */
+    background: linear-gradient(to top, rgba(255, 196, 2, 0.5) 10%, transparent 30%), 
+    url('/imagenes/7.jpg') center/cover no-repeat;
+}
+
+.img3:hover{ /* Clase que pone un efecto al pasar el mouse para que cresca el gradiente y su escala sea mayor*/
+    background: linear-gradient(to top, rgba(255,196,2,0.7) 0, transparent 60%),
+    url('/imagenes/7.jpg') center/cover no-repeat;
+    transform: scale(1.1);
+}
+
+.img4{ /* Clase que pone un efecto de gradiente a las cajas ademas de colocar su imagen de fondo */
+    background: linear-gradient(to top, rgba(255, 196, 2, 0.5) 10%, transparent 30%), 
+    url('/imagenes/1.jpg') center/cover no-repeat;
+}
+
+.img4:hover{ /* Clase que pone un efecto al pasar el mouse para que cresca el gradiente y su escala sea mayor*/
+    background: linear-gradient(to top, rgba(255,196,2,0.7) 0, transparent 60%),
+    url('/imagenes/1.jpg') center/cover no-repeat;
+    transform: scale(1.1);
+}
+
+.img5{ /* Clase que pone un efecto de gradiente a las cajas ademas de colocar su imagen de fondo */
+    background: linear-gradient(to top, rgba(255, 196, 2, 0.5) 10%, transparent 30%), 
+    url('/imagenes/2.jpg') center/cover no-repeat;
+}
+
+.img5:hover{ /* Clase que pone un efecto al pasar el mouse para que cresca el gradiente y su escala sea mayor*/
+    background: linear-gradient(to top, rgba(255,196,2,0.7) 0, transparent 60%),
+    url('/imagenes/2.jpg') center/cover no-repeat;
+    transform: scale(1.1);
+}
+
+.img6{ /* Clase que pone un efecto de gradiente a las cajas ademas de colocar su imagen de fondo */
+    background: linear-gradient(to top, rgba(255, 196, 2, 0.5) 10%, transparent 30%), 
+    url('/imagenes/2.jpg') center/cover no-repeat;
+}
+
+.img6:hover{ /* Clase que pone un efecto al pasar el mouse para que cresca el gradiente y su escala sea mayor*/
+    background: linear-gradient(to top, rgba(255,196,2,0.7) 0, transparent 60%),
+    url('/imagenes/2.jpg') center/cover no-repeat;
+    transform: scale(1.1);
+}
+
+.img7{ /* Clase que pone un efecto de gradiente a las cajas ademas de colocar su imagen de fondo */
+    background: linear-gradient(to top, rgba(255, 196, 2, 0.5) 10%, transparent 30%), 
+    url('/imagenes/2.jpg') center/cover no-repeat;
+}
+
+.img7:hover{ /* Clase que pone un efecto al pasar el mouse para que cresca el gradiente y su escala sea mayor*/
+    background: linear-gradient(to top, rgba(255,196,2,0.7) 0, transparent 60%),
+    url('/imagenes/2.jpg') center/cover no-repeat;
+    transform: scale(1.1);
+}
+
+.content{ /*Clase que le da estilo al emcabezado de todas las cajas (h2,h3 y p)*/
+    max-width: 50%;
+    margin-left: 40px;
+    margin-top: 3%;
+    font-size: clamp(1rem, 2vw, 2rem);
+}
+
+.content strong{ /*Clase que le da efecto al h2 para que tenga una mayor escala*/
+    font-size: clamp(3rem, 4vw, 4rem);
+    
+}
+
+.tab-content{ /* Esta clase lo tiene cada caja de contenido para estilo y funciones en JS*/
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.tab-content.hidden{ /* Esta clase lo tiene cada caja execto la visible y le da funcion en JS*/
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    position: absolute;
+}
+
+.hidden{ /* Clase para que en JS quite las cajas que no necesitamos ver */ 
+    display: none;
+}
+
+.first-box-btn{ /* Caja que contiene los botones para cambiar de contenido y su posicion*/
+    margin-left: auto;
+    display: flex;
+    flex-direction: column; 
+}
+
+.menu-btn{ /* Esta clase se usa para darle los estilos predeterminados a los botones ademas de que se usar para funciones en JS */
+    border: none;
+    background-color: #ffee00bd;
+    padding: 1rem;
+    width: 15%;
+    border-radius: 15px 0 0 15px;
+    transition: all 0.3s;
+    color: white;
+}
+
+.menu-btn.active{ /* Esta clase le da estilo al que esta seleccionado para que sea diferente y distingido */ 
+    border: none;
+    background-color: #ff9900ea;
+    padding: 1rem;
+    width: 15.5%;
+    border-radius: 15px 0 0 15px;
+    transform: scale(1.05);
+    font-size: 18px;
+    color: white;
+    margin-right: 0.5%;
+}
+
+.btn-position1{ /* Le da posicion dentro de la caja a al boton 1*/
+    position: absolute;
+    right: 0.01%;
+    bottom: 78%;
+}
+
+.btn-position2{ /* Le da posicion de la caja el boton 2*/
+    position: absolute;
+    right: 0.01%;
+    bottom: 82.5%;
+}
+
+.btn-position3{ /* Le da posicion de la caja el boton 3*/
+    position: absolute;
+    right: 0.01%;
+    bottom: 87%;
+}
+
+.hidden{ /* Se en carga de no mostrar las cajas que no estan en uso*/
+    display: none;
+}
+
+/* Media Queries*/
+@media (max-width: 1200px) { 
+.menu-btn.active{
+transform: none;
+font-size: 14px;
+}
+
+.btn-position3{
+    bottom: 86.7%;
+}
+
+.enlace-area{
+    font-size: clamp(0.7rem, 0.8vw, 0.8rem);
+}
+
+}
+
+
+
+@media (max-width: 768px) {
+
+.section, .section-etapas {
+width: 90vw;
+height: auto;
+margin: 1rem auto;
+
+} 
+
+.box-section, .box-section-etapas {
+flex-direction: column;
+margin: 0;
+padding-left: 1.2rem;
+justify-content: center;
+align-items: center;
+}
+
+.first-box-img {
+width: 80%;
+height: auto;
+position: static;
+}
+
+.menu-btn, .menu-btn.active {
+width: 20%;
+font-size: 1rem;
+}
+
+.enlace-area{
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+}
+
+.btn-position1{
+    bottom: 86.2%;
+}
+
+.btn-position2{
+    bottom: 90%;
+}
+
+.btn-position3{
+    bottom: 93%;
+}
+
+
+.content strong {
+font-size: 2rem;
+}
+
+.first-box-btn {
+align-items: center;
+margin: 1rem auto;
+}
+
+.first-box-img{
+    height: 23% ;
+    width: 50% ;
+    margin-left: 10rem;
+    margin-top: 1rem;
+    
+}
+
+.first-box{
+    height: 200vh;
+}
+
+}
+/**FIN DEL MAIN**/
+.footer {
+    padding-top: 20px;
+    margin-top: 0;
+}
+
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: #000; /* Fondo negro */
+    color: #fff;
+    padding: 40px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    font-size: 0.9rem;
+}
+
+/* Background and text color for Contacto section in footer */
+.footer-section.contact-info {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1 1 200px;
+    margin: 10px;
+}
+.footer-section h3 {
+    text-align: center;
+}
+.footer-section.contact-info h3 {
+    margin-top: -20px;
+}
+
+.footer-section h3 {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    border-bottom: 2px solid #555;
+    padding-bottom: 5px;
+}
+
+.footer-section p,
+.footer-section ul,
+.footer-section iframe {
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #ccc;
+}
+
+/* Social media icons */
+.footer-section.social-media {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer-section.social-media a {
+    display: inline-block;
+    margin: 0 7.5px;
+}
+.footer-section.social-media a:first-child {
+    margin-left: 0;
+}
+.footer-section.social-media a:last-child {
+    margin-right: 0;
+}
+.footer-section.social-media {
+    text-align: center;
+}
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+.social-icons a {
+    display: inline-block;
+}
+
+.footer-section.social-media a {
+    display: inline-block;
+}
+
+.footer-section.social-media img {
+    width: 32px;
+    height: 32px;
+    /* Removed filter to ensure icons are visible */
+    filter: none;
+    transition: filter 0.3s ease;
+}
+
+.footer-section.social-media a[aria-label="Twitter"] img {
+    filter: none;
+}
+
+.footer-section.social-media a:hover img {
+    filter: brightness(0) invert(0.7);
+}
+
+/* Map iframe */
+.footer-section.map {
+    text-align: center;
+}
+.footer-section.map iframe {
+    border-radius: 8px;
+    border: none;
+    display: inline-block;
+    margin: 0 auto;
+}
+
+
+
+/**FIN DEL CONTENIDO DE LA PAGINA ALQUILER DE LA NAVE CENTRAL**/
+
+/**MEDIA QUERYES**/
+@media (max-width: 768px) {
+
+    /* Ajustes para el footer */
+    .footer {
+        flex-direction: column;
+        padding: 20px 10px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 1095px) {
+    /* Ajustes para el header */
+    .nav-list {
+    flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+    display: none;
+}
+
+.nav-item {
+    margin: 10px 0; /* Espaciado vertical entre elementos */
+}
+
+.nav-menu.active .nav-list {
+    display: flex; /* Mostrar el menú en pantallas pequeñas cuando está activo */
+}
+
+}
+
+/**FIN DE MEDIA QUERYES**/
