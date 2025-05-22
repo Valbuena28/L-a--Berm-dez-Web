@@ -27,3 +27,20 @@ document.querySelectorAll('.section').forEach(div =>{
         }
     });
 });
+/**Menu hamburguesa**/
+document.getElementById('menu-toggle').addEventListener('click', function() {
+    document.getElementById('sidebar').style.left = '0';
+});
+
+document.getElementById('close-btn').addEventListener('click', function() {
+    document.getElementById('sidebar').style.left = '-250px';
+});
+
+// Toggle submenús
+const toggles = document.querySelectorAll('.toggle-submenu');
+toggles.forEach(toggle => {
+    toggle.addEventListener('click', function () {
+        const submenu = this.nextElementSibling;
+        submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+    });
+});

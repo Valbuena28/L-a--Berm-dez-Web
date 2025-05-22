@@ -20,16 +20,16 @@
 <section id="intro-video" class="intro-video">
 <div class="slideshow-background">
         <div id="slideshow" class="slideshow">
-            <img src="imagenes/CAMLB-1.jpg" alt="Programa" class="slide active" />
-            <img src="imagenes/CAMLB-2.jpg" alt="Área Escénica" class="slide" />
-            <img src="imagenes/CAMLB-3.JPG" alt="Exposiciones" class="slide" />
+            <img src="imagenes/CAMLB-7.jpg" alt="Programa" class="slide active" />
+            <img src="imagenes/CAMLB-1.jpg" alt="Área Escénica" class="slide" />
+            <img src="imagenes/CAMLB-2.jpg" alt="Exposiciones" class="slide" />
             <img src="imagenes/CAMLB-4.png" alt="Educación" class="slide" />
-            <img src="imagenes/CAMLB-5.jpg" alt="Centro de Arte" class="slide" />
+            <img src="imagenes/CAMLB-9.jpg" alt="Centro de Arte" class="slide" />
             <img src="imagenes/CAMLB-6.jpg" alt="Imagen 6" class="slide" />
-            <img src="imagenes/7.jpg" alt="Imagen 7" class="slide" />
-            <img src="imagenes/8.jpg" alt="Imagen 8" class="slide" />
-            <img src="imagenes/9.jpg" alt="Imagen 9" class="slide" />
-            <img src="imagenes/10.jpg" alt="Imagen 10" class="slide" />
+            <img src="imagenes/CAMLB-5.jpg" alt="Imagen 7" class="slide" />
+            <img src="imagenes/CAMLB-8.jpg" alt="Imagen 8" class="slide" />
+            <img src="imagenes/CAMLB-3.JPG" alt="Imagen 9" class="slide" />
+            <img src="imagenes/CAMLB-10.jpg" alt="Imagen 10" class="slide" />
         </div>
         <div id="dots" class="dots"></div>
     <div class="overlay"></div>
@@ -48,6 +48,74 @@
     <div class="logo">
     <a href="index.html"><img src="imagenes/logo 2.png" alt="Logo Centro de Arte Lía Bermúdez" /></a>
     </div>
+    <!-- Botón de menú hamburguesa -->
+<div class="menu-toggle" id="menu-toggle">
+    &#9776; <!-- ícono de tres barras -->
+</div>
+
+<!-- Menú lateral (sidebar) -->
+<div class="sidebar" id="sidebar">
+    <div class="logo-menu">
+        <img src="imagenes/logo 2.png" alt="Logo Centro de Arte Lía Bermúdez">
+    </div>
+    
+  <span class="close-btn" id="close-btn">&times;</span>
+  <ul class="sidebar-menu">
+    <li><a href="index.html">Inicio</a></li>
+
+    <li>
+      <details>
+        <summary class="toggle-submenu">Programación</summary>
+        <ul class="submenu">
+          <li><a href="Eventos y actividades/Eventos y Actividades.html">Eventos y Actividades</a></li>
+          <li><a href="Eventos y actividades pasadas/Eventos y Actividades Pasadas.html">Eventos y Actividades Pasadas</a></li>
+        </ul>
+      </details>
+    </li>
+
+    <li>
+      <details>
+        <summary class="toggle-submenu">Nave Central</summary>
+        <ul class="submenu">
+          <li><a href="Alquiler de la nave central/Alquiler de la Nave Central.html">Alquiler de la Nave Central</a></li>
+        </ul>
+      </details>
+    </li>
+
+    <li>
+      <details>
+        <summary class="toggle-submenu">Exposiciones</summary>
+        <ul class="submenu">
+          <li><a href="Exposiciones/Exposiciones de Arte.html">Exposiciones de Arte</a></li>
+        </ul>
+      </details>
+    </li>
+
+    <li>
+      <details>
+        <summary class="toggle-submenu">Educación</summary>
+        <ul class="submenu">
+          <li><a href="Visitas Guiadas/Visitas Guiadas.html">Visitas Guiadas</a></li>
+          <li><a href="Cursos/Cursos.html">Cursos</a></li>
+          <li><a href="Talleres/talleres.html">Talleres</a></li>
+        </ul>
+      </details>
+    </li>
+
+    <li>
+      <details>
+        <summary class="toggle-submenu">El Centro De Arte</summary>
+        <ul class="submenu">
+          <li><a href="Historia el centro de arte/Historia del Centro de Arte.html">Historia del Centro de Arte</a></li>
+          <li><a href="Sobre Nosotros/Sobre Nosotros.html">Sobre Nosotros</a></li>
+        </ul>
+      </details>
+    </li>
+  </ul>
+</div>
+
+
+
     <nav class="nav-menu">
         <ul class="nav-list">
             <li class="nav-item dropdown">
@@ -83,8 +151,8 @@
             <li class="nav-item dropdown">
                 <a href="#" class="nav-link">El Centro De Arte</a>
                 <ul class="dropdown-menu">
-                    <li><a href="Historia el centro de arte/Historia del Centro de Arte.html" class="dropdown-link">HISTORIA</a></li>
-                    <li><a href="Sobre Nosotros/Sobre Nosotros.html" class="dropdown-link">CONÓCENOS</a></li>
+                    <li><a href="Historia el centro de arte/Historia del Centro de Arte.html" class="dropdown-link">Historia del Centro de Arte</a></li>
+                    <li><a href="Sobre Nosotros/Sobre Nosotros.html" class="dropdown-link">Sobre Nosotros</a></li>
                 </ul>
             </li>
         </ul>
@@ -94,7 +162,8 @@
 
 
         <section class="section">
-            <h1>Programación</h1>
+            <h2 class="main-titles">Programación</h2>
+            <h2 class="titles">Eventos y actividades</h2>
             <div class="calendar" >
                 <div class="calendar-header" >
                     <button id="prevMonth"><</button>
@@ -116,9 +185,189 @@
                 <div class="event-info" id="eventInfo"></div>
                 <button class="ver-mas-btn" id="verMasBtn">Ver más</button>
             </div>
+        </section> 
+        <section class="section">
+            <h2 class="titles">Eventos y actividades pasadas</h2>
+            <div class="container">
+                <div class="month">
+                    <h2>Enero 2025</h2>
+                    <div class="arrow_down" title="Flecha hacia abajo"><div class="arrow">&#x21E3;</div></div>
+                    <div class="annual_calendar_grip">
+                        <div class="eventos">
+                            <img src="imagenes/8.jpg" alt="">
+                            <h2>Teatro de melancolia</h2>
+                            <h3>Tipo de evento: Teatro</h3>
+                            <h3>fecha: 22/05/2025</h3>
+                            <p>En este evento pudimos presenciar todo lo acontecido el dia ed ayer Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam autem architecto expedita error optio molestias qui accusamus commodi quo asperiores illo possimus, minus debitis recusandae quis porro doloremque? Autem, voluptatibus.</p>
+
+                        </div>
+                        <div class="eventos">
+                            <img src="imagenes/8.jpg" alt="">
+                            <h2>Teatro de melancolia</h2>
+                            <h3>Tipo de evento: Teatro</h3>
+                            <h3>fecha: 22/05/2025</h3>
+                            <p>En este evento pudimos presenciar todo lo acontecido el dia ed ayer Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam autem architecto expedita error optio molestias qui accusamus commodi quo asperiores illo possimus, minus debitis recusandae quis porro doloremque? Autem, voluptatibus.</p>
+
+                        </div>
+                        <div class="eventos">
+                            <img src="imagenes/8.jpg" alt="">
+                            <h2>Teatro de melancolia</h2>
+                            <h3>Tipo de evento: Teatro</h3>
+                            <h3>fecha: 22/05/2025</h3>
+                            <p>En este evento pudimos presenciar todo lo acontecido el dia ed ayer Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam autem architecto expedita error optio molestias qui accusamus commodi quo asperiores illo possimus, minus debitis recusandae quis porro doloremque? Autem, voluptatibus.</p>
+
+                        </div>
+                        <div class="eventos">
+                            <img src="imagenes/8.jpg" alt="">
+                            <h2>Teatro de melancolia</h2>
+                            <h3>Tipo de evento: Teatro</h3>
+                            <h3>fecha: 22/05/2025</h3>
+                            <p>En este evento pudimos presenciar todo lo acontecido el dia ed ayer Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam autem architecto expedita error optio molestias qui accusamus commodi quo asperiores illo possimus, minus debitis recusandae quis porro doloremque? Autem, voluptatibus.</p>
+
+                        </div>
+                        <div class="eventos">
+                            <img src="imagenes/8.jpg" alt="">
+                            <h2>Teatro de melancolia</h2>
+                            <h3>Tipo de evento: Teatro</h3>
+                            <h3>fecha: 22/05/2025</h3>
+                            <p>En este evento pudimos presenciar todo lo acontecido el dia ed ayer Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam autem architecto expedita error optio molestias qui accusamus commodi quo asperiores illo possimus, minus debitis recusandae quis porro doloremque? Autem, voluptatibus.</p>
+
+                        </div>
+                        <div class="eventos">
+                            <img src="imagenes/8.jpg" alt="">
+                            <h2>Teatro de melancolia</h2>
+                            <h3>Tipo de evento: Teatro</h3>
+                            <h3>fecha: 22/05/2025</h3>
+                            <p>En este evento pudimos presenciar todo lo acontecido el dia ed ayer Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam autem architecto expedita error optio molestias qui accusamus commodi quo asperiores illo possimus, minus debitis recusandae quis porro doloremque? Autem, voluptatibus.</p>
+
+                        </div>
+                        <div class="eventos">
+                            <img src="imagenes/8.jpg" alt="">
+                            <h2>Teatro de melancolia</h2>
+                            <h3>Tipo de evento: Teatro</h3>
+                            <h3>fecha: 22/05/2025</h3>
+                            <p>En este evento pudimos presenciar todo lo acontecido el dia ed ayer Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam autem architecto expedita error optio molestias qui accusamus commodi quo asperiores illo possimus, minus debitis recusandae quis porro doloremque? Autem, voluptatibus.</p>
+
+                        </div>
+                        <div class="eventos">
+                            <img src="imagenes/8.jpg" alt="">
+                            <h2>Teatro de melancolia</h2>
+                            <h3>Tipo de evento: Teatro</h3>
+                            <h3>fecha: 22/05/2025</h3>
+                            <p>En este evento pudimos presenciar todo lo acontecido el dia ed ayer Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam autem architecto expedita error optio molestias qui accusamus commodi quo asperiores illo possimus, minus debitis recusandae quis porro doloremque? Autem, voluptatibus.</p>
+
+                        </div>
+                        <div class="eventos">
+                            <img src="imagenes/8.jpg" alt="">
+                            <h2>Teatro de melancolia</h2>
+                            <h3>Tipo de evento: Teatro</h3>
+                            <h3>fecha: 22/05/2025</h3>
+                            <p>En este evento pudimos presenciar todo lo acontecido el dia ed ayer Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam autem architecto expedita error optio molestias qui accusamus commodi quo asperiores illo possimus, minus debitis recusandae quis porro doloremque? Autem, voluptatibus.</p>
+
+                        </div>
+                        <div class="eventos">
+                            <img src="imagenes/8.jpg" alt="">
+                            <h2>Teatro de melancolia</h2>
+                            <h3>Tipo de evento: Teatro</h3>
+                            <h3>fecha: 22/05/2025</h3>
+                            <p>En este evento pudimos presenciar todo lo acontecido el dia ed ayer Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam autem architecto expedita error optio molestias qui accusamus commodi quo asperiores illo possimus, minus debitis recusandae quis porro doloremque? Autem, voluptatibus.</p>
+
+                        </div>
+                        <div class="eventos">
+                            <img src="imagenes/8.jpg" alt="">
+                            <h2>Teatro de melancolia</h2>
+                            <h3>Tipo de evento: Teatro</h3>
+                            <h3>fecha: 22/05/2025</h3>
+                            <p>En este evento pudimos presenciar todo lo acontecido el dia ed ayer Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam autem architecto expedita error optio molestias qui accusamus commodi quo asperiores illo possimus, minus debitis recusandae quis porro doloremque? Autem, voluptatibus.</p>
+
+                        </div>
+                        <div class="eventos">
+                            <img src="imagenes/8.jpg" alt="">
+                            <h2>Teatro de melancolia</h2>
+                            <h3>Tipo de evento: Teatro</h3>
+                            <h3>fecha: 22/05/2025</h3>
+                            <p>En este evento pudimos presenciar todo lo acontecido el dia ed ayer Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam autem architecto expedita error optio molestias qui accusamus commodi quo asperiores illo possimus, minus debitis recusandae quis porro doloremque? Autem, voluptatibus.</p>
+
+                        </div>
+                        <div class="eventos">
+                            <img src="imagenes/8.jpg" alt="">
+                            <h2>Teatro de melancolia</h2>
+                            <h3>Tipo de evento: Teatro</h3>
+                            <h3>fecha: 22/05/2025</h3>
+                            <p>En este evento pudimos presenciar todo lo acontecido el dia ed ayer Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam autem architecto expedita error optio molestias qui accusamus commodi quo asperiores illo possimus, minus debitis recusandae quis porro doloremque? Autem, voluptatibus.</p>
+
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+                <div class="month">
+                    <h2>Febrero 2025</h2>
+                    <div class="arrow_down" title="Flecha hacia abajo"><div class="arrow">&#x21E3;</div></div>
+                </div>  
+                <div class="month">
+                    <h2>Marzo 2025</h2>
+                    <div class="arrow_down" title="Flecha hacia abajo"><div class="arrow">&#x21E3;</div></div>
+                </div>
+                <div class="month">
+                    <h2>Abril 2025</h2>
+                    <div class="arrow_down" title="Flecha hacia abajo"><div class="arrow">&#x21E3;</div></div>
+                </div>
+                <div class="month">
+                    <h2>Mayo 2025</h2>
+                    <div class="arrow_down" title="Flecha hacia abajo"><div class="arrow">&#x21E3;</div></div>
+                </div>
+                <div class="month">
+                    <h2>Junio 2025</h2>
+                    <div class="arrow_down" title="Flecha hacia abajo"><div class="arrow">&#x21E3;</div></div>
+                </div>
+                <div class="month">
+                    <h2>Julio 2025</h2>
+                    <div class="arrow_down" title="Flecha hacia abajo"><div class="arrow">&#x21E3;</div></div>
+                </div>
+                <div class="month">
+                    <h2>Agosto 2025</h2>
+                    <div class="arrow_down" title="Flecha hacia abajo"><div class="arrow">&#x21E3;</div></div>
+                </div>
+                <div class="month">
+                    <h2>Septiembre 2025</h2>
+                    <div class="arrow_down" title="Flecha hacia abajo"><div class="arrow">&#x21E3;</div></div>
+                </div>
+                <div class="month">
+                    <h2>Octubre 2025</h2>
+                    <div class="arrow_down" title="Flecha hacia abajo"><div class="arrow">&#x21E3;</div></div>
+                </div>
+                <div class="month">
+                    <h2>Noviembre 2025</h2>
+                    <div class="arrow_down" title="Flecha hacia abajo"><div class="arrow">&#x21E3;</div></div>
+                </div>
+                <div class="month">
+                    <h2>Diciembre 2025</h2>
+                    <div class="arrow_down" title="Flecha hacia abajo"><div class="arrow">&#x21E3;</div></div>
+                </div>
+
+            </div>
         </section>
 
-      
+       <section class="section">
+  <div class="carousel-container">
+    <div class="carousel-slide">
+      <div class="carousel-item" onclick="alert('Haz clic en la imagen 1')">
+        <img src="imagenes/exposicion.png" alt="Imagen 1">
+        <p class="overlay-text">Conoce la historia del puente sobre el Lago</p>
+      </div>
+      <div class="carousel-item" onclick="alert('Haz clic en la imagen 2')">
+        <img src="imagenes/2.jpg" alt="Imagen 2">
+        <p class="overlay-text">El centro histórico de Maracaibo</p>
+      </div>
+      <div class="carousel-item" onclick="alert('Haz clic en la imagen 3')">
+        <img src="imagenes/3.jpg" alt="Imagen 3">
+        <p class="overlay-text">Tradiciones zulianas que perduran</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 </main>
 
@@ -164,12 +413,9 @@
     </footer>
 
     <!-- Botón flotante para volver al inicio de la página -->
-    <button id="scrollTopBtn" title="Volver arriba">&#8679;</button>
+    <button id="scrollTopBtn" title="Volver arriba">&#x21E3;</button>
 
-<!-- Botón para volver arriba -->
-<button id="scrollTopBtn" aria-label="Volver arriba" title="Volver arriba" style="display:none; position: fixed; bottom: 70px; right: 20px; z-index: 9999; background-color: #000; color: #fff; border: none; padding: 10px 15px; border-radius: 50%; font-size: 1.5rem; cursor: pointer; box-shadow: 0 2px 6px rgba(0,0,0,0.3);">
-    &#8679;
-</button>
+
 
     <script src="script.js"></script>
 </body>

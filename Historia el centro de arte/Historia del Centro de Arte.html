@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Sobre Nosotros</title>
+    <title>Historia del centro e arte</title>
     <link rel="stylesheet" href="styles.css" />
 </head>
 
@@ -11,6 +11,70 @@
 <div class="header">
 <div class="logo">
 <a href="index.html"><img src="../imagenes/logo 2.png" alt="Logo Centro de Arte Lía Bermúdez" /></a>
+</div>
+ <!-- Botón de menú hamburguesa -->
+<div class="menu-toggle" id="menu-toggle">
+    &#9776; <!-- ícono de tres barras -->
+</div>
+
+<!-- Menú lateral (sidebar) -->
+<div class="sidebar" id="sidebar">
+  <span class="close-btn" id="close-btn">&times;</span>
+  <ul class="sidebar-menu">
+    <div class="logo-menu">
+        <img src="../imagenes/logo 2.png" alt="Logo Centro de Arte Lía Bermúdez">
+    </div>
+    <li><a href="index.html">Inicio</a></li>
+
+    <li>
+      <details>
+        <summary class="toggle-submenu">Programación</summary>
+        <ul class="submenu">
+          <li><a href="Eventos y actividades/Eventos y Actividades.html">Eventos y Actividades</a></li>
+          <li><a href="Eventos y actividades pasadas/Eventos y Actividades Pasadas.html">Eventos y Actividades Pasadas</a></li>
+        </ul>
+      </details>
+    </li>
+
+    <li>
+      <details>
+        <summary class="toggle-submenu">Nave Central</summary>
+        <ul class="submenu">
+          <li><a href="Alquiler de la nave central/Alquiler de la Nave Central.html">Alquiler de la Nave Central</a></li>
+        </ul>
+      </details>
+    </li>
+
+    <li>
+      <details>
+        <summary class="toggle-submenu">Exposiciones</summary>
+        <ul class="submenu">
+          <li><a href="Exposiciones/Exposiciones de Arte.html">Exposiciones de Arte</a></li>
+        </ul>
+      </details>
+    </li>
+
+    <li>
+      <details>
+        <summary class="toggle-submenu">Educación</summary>
+        <ul class="submenu">
+          <li><a href="Visitas Guiadas/Visitas Guiadas.html">Visitas Guiadas</a></li>
+          <li><a href="Cursos/Cursos.html">Cursos</a></li>
+          <li><a href="Talleres/talleres.html">Talleres</a></li>
+        </ul>
+      </details>
+    </li>
+
+    <li>
+      <details>
+        <summary class="toggle-submenu">El Centro De Arte</summary>
+        <ul class="submenu">
+          <li><a href="Historia el centro de arte/Historia del Centro de Arte.html">Historia del Centro de Arte</a></li>
+          <li><a href="Sobre Nosotros/Sobre Nosotros.html">Sobre Nosotros</a></li>
+        </ul>
+      </details>
+    </li>
+  </ul>
 </div>
 <nav class="nav-menu" id="intro-nav-menu">
     <ul class="nav-list">
@@ -48,7 +112,7 @@
             <a href="#" class="nav-link">El Centro De Arte</a>
             <ul class="dropdown-menu">
                 <li><a href="Historia del Centro de Arte.html" class="dropdown-link">Historia del Centro de Arte</a></li>
-                <li><a href="../Sobre Nosotros/Sobre Nosotros.html" class="dropdown-link">Conócenos</a></li>
+                <li><a href="../Sobre Nosotros/Sobre Nosotros.html" class="dropdown-link">Sobre Nosotros</a></li>
             </ul>
         </li>
     </ul>
@@ -56,7 +120,7 @@
 </div>
 
     <main>
-        <div class="first-box">
+         <div class="first-box">
             <div class="first-box-content tab-content hidden" id="tab1">
                 <h2 class="content"><strong>EL CENTRO DE ARTE</strong></h2>
                 <h3 class="content">HISTORIA</h3>
@@ -92,6 +156,7 @@
                 <button class="menu-btn btn-position1" data-target="tab1">FIGURA JURIDICA</button>
             </div>
         </div>
+        
     </main>
 
     <footer class="footer">
@@ -128,8 +193,8 @@
                     <li><a href="../Visitas Guiadas/Visitas Guiadas.html">Visitas Guiadas</a></li>
                     <li><a href="../Cursos/Cursos.html">Cursos</a></li>
                     <li><a href="../Talleres/talleres.html">Talleres</a></li>
-                    <li><a href="../Historia el centro de arte/Historia del Centro de Arte.html">HISTORIA</a></li>
-                    <li><a href="Sobre Nosotros.html">CONÓCENOS</a></li>
+                    <li><a href="Historia del Centro de Arte.html">Historia del Centro de Arte</a></li>
+                    <li><a href="../Sobre Nosotros/Sobre Nosotros.html">Sobre Nosotros</a></li>
                 </ul>
             </div>
         </div>

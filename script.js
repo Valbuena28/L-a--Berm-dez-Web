@@ -300,10 +300,51 @@
             toggleScrollButton();
         })();
 
-/**CODIGO DE LA PAGINA ALQUILER DE LA NAVE CENTRAL**/
-      
+/**Menu hamburguesa**/
+document.getElementById('menu-toggle').addEventListener('click', function() {
+    document.getElementById('sidebar').style.left = '0';
+});
 
-/**FIN DEL CODIGO DE LA PAGINA ALQUILER DE LA NAVE CENTRAL**/
+document.getElementById('close-btn').addEventListener('click', function() {
+    document.getElementById('sidebar').style.left = '-250px';
+});
+
+// Toggle submenús
+const toggles = document.querySelectorAll('.toggle-submenu');
+toggles.forEach(toggle => {
+    toggle.addEventListener('click', function () {
+        const submenu = this.nextElementSibling;
+        submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    const arrow = document.querySelector(".arrow");
+    const calendarioAnual = document.querySelector(".annual_calendar_grip");
+    const tituloMes = document.querySelector(".month h2");
+
+    arrow.addEventListener("click", function() {
+        arrow.classList.toggle("up");
+        calendarioAnual.classList.toggle("activo");
+        tituloMes.classList.toggle("subrayado");
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    const slide = document.querySelector(".carousel-slide");
+    const items = document.querySelectorAll(".carousel-item");
+    let index = 0;
+
+    function moveToNextSlide() {
+        index = (index + 1) % items.length;
+        slide.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    // Cambiar cada 4 segundos
+    setInterval(moveToNextSlide, 4000);
+});
+
+
 
 
 
