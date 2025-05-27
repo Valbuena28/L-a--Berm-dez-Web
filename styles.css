@@ -1127,8 +1127,8 @@ body.eventos-actividades-pasadas main {
 /**Noticias**/
 
 .slider {
-  width: 91vw;
-  height: 80vh;
+  width: 90vw;
+  height: 50vh;
   background-color: #222;
   display: flex;
   align-items: center;
@@ -1223,8 +1223,10 @@ body.eventos-actividades-pasadas main {
   }
 
   .news {
-    padding: 20px;
+    padding: 10px;
+    margin-bottom: 50px;
   }
+  
 
   .img-container img {
     object-fit: contain;
