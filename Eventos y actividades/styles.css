@@ -9,8 +9,8 @@
 /* Estilos generales para el cuerpo de la página */
 body {
     font-family: Arial; /* Fuente legible y común */
-    background-color: #000; /* Fondo negro */
-    color: #000; /* Texto negro */
+    background-color: #100A05; /* Fondo negro */
+    color: #333; /* Texto negro */
     line-height: 1.6; /* Altura de línea para mejor lectura */
     /* Removed min-height: 200vh to allow footer positioning */
     display: flex;
@@ -114,6 +114,71 @@ main {
 
 /**COLOCA AQUI EL ESTILO DEL MAIN**/
 
+
+/* Contenedor principal centrado */
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  background-color: #222;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-top: 5px solid #ff9900ea;
+  border-right: 5px solid #ff9900ea;
+}
+
+/* Imagen destacada */
+.img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* Título estilo titular de periódico */
+.title {
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  border-bottom: 5px solid #ffee00bd;
+  padding-bottom: 10px;
+}
+
+/* Subinformación (fecha, lugar, duración) */
+.info {
+  font-size: 1em;
+  font-weight: normal;
+  margin: 5px 0;
+  font-family: 'Georgia', serif;
+}
+
+/* Descripción */
+.text p {
+  text-align: justify;
+  line-height: 1.6;
+  margin-top: 15px;
+  font-size: 1.05em;
+}
+
+/* Responsive: mejora legibilidad en móviles */
+@media (max-width: 600px) {
+  .container {
+    padding: 15px;
+    margin: 20px 10px;
+  }
+
+  .title {
+    font-size: 1.5em;
+  }
+
+  .text p {
+    font-size: 1em;
+  }
+}
 
 
 .footer {
