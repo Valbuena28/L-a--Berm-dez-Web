@@ -62,22 +62,22 @@
         const events = [
             {
                 id: 1,
-                title: 'Concierto de Jazz',
+                title: 'Taller de arte y creatividad',
                 date: new Date(currentYear, currentMonth, 5).toISOString().split('T')[0],
-                description: 'Una noche mágica con los mejores músicos de jazz.',
-                duration: '2 horas',
-                place: 'Auditorio Principal',
-                image: 'imagenes/1.jpg',
+                description: ' Te invitamos a disfrutar del Taller “Arte y Creatividad',
+                duration: 'De 9:30 am a 12:30 pm',
+                place: 'Sala de lectura',
+                image: 'imagenes/CAMLB-EVENTOS-1.jpg',
                 moreInfoUrl: '#'
             },
             {
                 id: 2,
-                title: 'Exposición de Arte Moderno',
+                title: 'Capitan Avispa',
                 date: new Date(currentYear, currentMonth, 12).toISOString().split('T')[0],
-                description: 'Explora las últimas tendencias en arte contemporáneo.',
-                duration: 'Todo el día',
-                place: 'Galería de Arte',
-                image: 'imagenes/2.jpg',
+                description: 'Te invitamos a disfrutar de esta emocionante pelicula',
+                duration: '3 pm',
+                place: 'CAM CAFE',
+                image: 'imagenes/CAMLB-EVENTOS-2.jpg',
                 moreInfoUrl: '#'
             },
             {
@@ -248,8 +248,10 @@
                 <p><strong>Lugar:</strong> ${event.place}</p>
             `;
             verMasBtn.onclick = () => {
-                window.location.href = 'Eventos y Actividades.html';
-            };
+    localStorage.setItem('selectedEvent', JSON.stringify(event));
+    window.location.href = 'Eventos y actividades/Eventos y Actividades.html';
+};
+
             eventDetails.style.display = 'block';
             eventList.style.display = 'none';
             calendarGrid.style.display = 'none';
@@ -343,6 +345,22 @@ document.addEventListener("DOMContentLoaded", function() {
     // Cambiar cada 4 segundos
     setInterval(moveToNextSlide, 4000);
 });
+
+/**nOTICIAS**/
+
+
+  let currentIndex = 0;
+  const slidesWrapper = document.querySelector(".slides-wrapper");
+  const totalSlides = document.querySelectorAll(".container_all").length;
+
+  function changeSlide(direction) {
+    currentIndex += direction;
+
+    if (currentIndex < 0) currentIndex = totalSlides - 1;
+    if (currentIndex >= totalSlides) currentIndex = 0;
+
+    slidesWrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
+  }
 
 
 

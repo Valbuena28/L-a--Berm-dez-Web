@@ -7,7 +7,7 @@
 
 /* Estilos generales para el cuerpo de la página */
 body {
-    font-family: Arial; /* Fuente legible y común */
+    font-family: tahoma; /* Fuente legible y común */
     background-color: #100A05; /* Fondo negro */
     line-height: 1.6; /* Altura de línea para mejor lectura */
     /* Removed min-height: 200vh to allow footer positioning */
@@ -25,8 +25,8 @@ main {
 
 /**Estilos de la pantalla con el nombre del Lia Bermudez**/
 .lia-bermudez {
-    font-size: 4.5rem;
-    font-weight: bold;
+    font-size: 3.5rem;
+   
 }
   /* Ensure intro-video section and children are flush to top */
   #intro-video, #intro-video .slideshow-background, #intro-video .slideshow, #intro-video .overlay, #intro-video h1.intro-title {
@@ -191,15 +191,15 @@ main {
 
 /* Title inside intro section */
 .intro-title {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     margin: 20px 0 20px 0;
-    font-weight: bold;
     order: -1; /* Ensure title is visually above slideshow in flex layout */
     width: 100%;
     z-index: 10;
     position: relative;
     background-color: rgba(0,0,0,0.5);
     padding: 10px 0;
+    line-height: 1.1;
 }
 
 /* Slideshow background container */
@@ -482,6 +482,8 @@ main {
 }
 .titles{
     margin-top: 20px;
+    margin-bottom: 10px;
+    border-bottom: 3px solid #ffee0077;
     color: #fff;
 
    
@@ -813,6 +815,8 @@ body.eventos-actividades-pasadas main {
 }
 .event-box:hover {
     background-color: #100A05;
+    color: #ffee0077;
+    box-shadow: 0 0 10px 10px #ffee0077;
 }
 .event-box img {
     width: 100%;
@@ -1119,6 +1123,118 @@ body.eventos-actividades-pasadas main {
 .overlay-text:hover{
    background: rgba(0, 0, 0, 0.781); /* Cambia la opacidad en hover */
 }
+
+/**Noticias**/
+
+.slider {
+  width: 90vw;
+  height: 50vh;
+  background-color: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.slides-wrapper {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s ease;
+}
+
+.container_all {
+  width: 100%;
+  flex-shrink: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container_news {
+  width: 91%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.news {
+  width: 50%;
+  color: #fff;
+  padding: 40px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.img-container {
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.news h2 {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+  border-bottom: 3px solid #ffee0077;
+}
+
+.news p {
+  text-align: justify;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: #fff;
+  background-color: rgba(0,0,0,0.3);
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+@media (max-width: 768px) {
+  .container_news {
+    flex-direction: column;
+  }
+
+  .news,
+  .img-container {
+    width: 100%;
+    height: 50%;
+  }
+
+  .news {
+    padding: 10px;
+    margin-bottom: 50px;
+  }
+  
+
+  .img-container img {
+    object-fit: contain;
+    height: 100%;
+  }
+}
+
+
 
 
 /**RESPONSIVE DE EVENTOS Y ACTIVIDADES PASADAS**/

@@ -420,3 +420,472 @@
     <script src="script.js"></script>
 </body>
 </html>
+
+<!DOCTYPE html>
+<!-- Definición del tipo de documento HTML5 y el idioma principal del documento en español -->
+<html lang="es">
+<head>
+    <!-- Configuración de la codificación de caracteres para soportar caracteres especiales -->
+    <meta charset="UTF-8" />
+    <!-- Configuración para que la página sea responsiva y se adapte al ancho del dispositivo -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Título que aparece en la pestaña del navegador -->
+    <title>Centro de Arte Lía Bermúdez</title>
+    <!-- Enlace a la hoja de estilos externa para dar formato y diseño a la página -->
+    <link rel="stylesheet" href="styles.css" />
+ 
+</head>
+<body>
+
+<main>
+        <!-- Contenido principal de la página -->
+        <!-- Sección de introducción con título, slideshow de imágenes -->
+<section id="intro-video" class="intro-video">
+<div class="slideshow-background">
+        <div id="slideshow" class="slideshow">
+            <img src="imagenes/CAMLB-7.jpg" alt="Programa" class="slide active" />
+            <img src="imagenes/CAMLB-1.jpg" alt="Área Escénica" class="slide" />
+            <img src="imagenes/CAMLB-2.jpg" alt="Exposiciones" class="slide" />
+            <img src="imagenes/CAMLB-4.png" alt="Educación" class="slide" />
+            <img src="imagenes/CAMLB-9.jpg" alt="Centro de Arte" class="slide" />
+            <img src="imagenes/CAMLB-6.jpg" alt="Imagen 6" class="slide" />
+            <img src="imagenes/CAMLB-5.jpg" alt="Imagen 7" class="slide" />
+            <img src="imagenes/CAMLB-8.jpg" alt="Imagen 8" class="slide" />
+            <img src="imagenes/CAMLB-3.JPG" alt="Imagen 9" class="slide" />
+            <img src="imagenes/CAMLB-10.jpg" alt="Imagen 10" class="slide" />
+        </div>
+        <div id="dots" class="dots"></div>
+    <div class="overlay"></div>
+    <div class="intro-title-container">
+    <h1 class="intro-title">
+        CENTRO DE ARTE<br />
+        DE MARACAIBO<br />
+        <span class="lia-bermudez">LIA BERMUDEZ</span>
+    </h1>
+</div>
+</div>
+</section>
+
+    
+<div class="header">
+    <div class="logo">
+    <a href="index.html"><img src="imagenes/logo 2.png" alt="Logo Centro de Arte Lía Bermúdez" /></a>
+    </div>
+    <!-- Botón de menú hamburguesa -->
+<div class="menu-toggle" id="menu-toggle">
+    &#9776; <!-- ícono de tres barras -->
+</div>
+
+<!-- Menú lateral (sidebar) -->
+<div class="sidebar" id="sidebar">
+    <div class="logo-menu">
+        <img src="imagenes/logo 2.png" alt="Logo Centro de Arte Lía Bermúdez">
+    </div>
+    
+  <span class="close-btn" id="close-btn">&times;</span>
+  <ul class="sidebar-menu">
+    <li><a href="index.html">Inicio</a></li>
+
+    <li>
+      <details>
+        <summary class="toggle-submenu">Programación</summary>
+        <ul class="submenu">
+          <li><a href="#">Eventos y Actividades</a></li>
+          <li><a href="#">Eventos y Actividades Pasadas</a></li>
+        </ul>
+      </details>
+    </li>
+
+    <li>
+      <details>
+        <summary class="toggle-submenu">Nave Central</summary>
+        <ul class="submenu">
+          <li><a href="Alquiler de la nave central/Alquiler de la Nave Central.html">Alquiler de la Nave Central</a></li>
+        </ul>
+      </details>
+    </li>
+
+    <li>
+      <details>
+        <summary class="toggle-submenu">Exposiciones</summary>
+        <ul class="submenu">
+          <li><a href="Exposiciones/Exposiciones de Arte.html">Exposiciones de Arte</a></li>
+        </ul>
+      </details>
+    </li>
+
+    <li>
+      <details>
+        <summary class="toggle-submenu">Educación</summary>
+        <ul class="submenu">
+          <li><a href="Visitas Guiadas/Visitas Guiadas.html">Visitas Guiadas</a></li>
+          <li><a href="Cursos/Cursos.html">Cursos</a></li>
+          <li><a href="Talleres/talleres.html">Talleres</a></li>
+        </ul>
+      </details>
+    </li>
+
+    <li>
+      <details>
+        <summary class="toggle-submenu">El Centro De Arte</summary>
+        <ul class="submenu">
+          <li><a href="Historia el centro de arte/Historia del Centro de Arte.html">Historia del Centro de Arte</a></li>
+          <li><a href="Sobre Nosotros/Sobre Nosotros.html">Sobre Nosotros</a></li>
+        </ul>
+      </details>
+    </li>
+  </ul>
+</div>
+
+
+
+    <nav class="nav-menu">
+        <ul class="nav-list">
+            <li class="nav-item dropdown">
+                <a href="index.html" class="nav-link">Inicio</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link">Programación</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#" class="dropdown-link">Eventos y Actividades</a></li>
+                    <li><a href="#" class="dropdown-link">Eventos y Actividades Pasadas</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link">Nave Central</a>
+                <ul class="dropdown-menu">
+                    <li><a href="Alquiler de la nave central/Alquiler de la Nave Central.html" class="dropdown-link">Alquiler de la Nave Central</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link">Exposiciones</a>
+                <ul class="dropdown-menu">
+                    <li><a href="Exposiciones/Exposiciones de Arte.html" class="dropdown-link">Exposiciones de Arte</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link">Educación</a>
+                <ul class="dropdown-menu">
+                    <li><a href="Visitas Guiadas/Visitas Guiadas.html" class="dropdown-link">Visitas Guiadas</a></li>
+                    <li><a href="Cursos/Cursos.html" class="dropdown-link">Cursos</a></li>
+                    <li><a href="Talleres/talleres.html" class="dropdown-link">Talleres</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link">El Centro De Arte</a>
+                <ul class="dropdown-menu">
+                    <li><a href="Historia el centro de arte/Historia del Centro de Arte.html" class="dropdown-link">Historia del Centro de Arte</a></li>
+                    <li><a href="Sobre Nosotros/Sobre Nosotros.html" class="dropdown-link">Sobre Nosotros</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    </div>
+
+
+
+        <section class="section">
+            <h2 class="main-titles">Programación</h2>
+            <h2 class="titles">Eventos y actividades</h2>
+            <div class="calendar" >
+                <div class="calendar-header" >
+                    <button id="prevMonth"><</button>
+                    <div id="monthYear"></div>
+                    <button id="nextMonth">></button>
+                </div>
+                <div class="calendar-grid" id="calendarGrid" >
+                    <!-- Days and dates will be generated here --> 
+                </div>
+            </div>
+            <!-- Removed the Eventos del Mes section as requested -->
+            <!-- <div class="event-list" id="eventList"> 
+                <h2>Eventos del Mes</h2> -->
+                <!-- Event items will be listed here -->
+            </div> 
+            <div class="event-details" id="eventDetails">
+                <h2 class="event-title" id="eventTitle"></h2>
+                <img id="eventImage" class="event-image" src="" alt="Imagen del evento" />
+                <div class="event-info" id="eventInfo"></div>
+                <button class="ver-mas-btn" id="verMasBtn">Ver más</button>
+            </div>
+        </section> 
+        <section class="section">
+            <h2 class="titles">Eventos y actividades pasadas</h2>
+            <div class="container">
+                <div class="month">
+                    <h2>Enero 2025</h2>
+                    <div class="arrow_down" title="Flecha hacia abajo"><div class="arrow">&#x21E3;</div></div>
+                    <div class="annual_calendar_grip">
+                        <div class="eventos">
+                            <img src="imagenes/8.jpg" alt="">
+                            <h2>Teatro de melancolia</h2>
+                            <h3>Tipo de evento: Teatro</h3>
+                            <h3>fecha: 22/05/2025</h3>
+                            <p>En este evento pudimos presenciar todo lo acontecido el dia ed ayer Lorem ipsum dolor sit </p>
+
+                        </div>
+                        <div class="eventos">
+                            <img src="imagenes/8.jpg" alt="">
+                            <h2>Teatro de melancolia</h2>
+                            <h3>Tipo de evento: Teatro</h3>
+                            <h3>fecha: 22/05/2025</h3>
+                            <p>En este evento pudimos presenciar todo lo acontecido el dia ed ayer Lorem ipsum dolor sit </p>
+
+                        </div>
+                        <div class="eventos">
+                            <img src="imagenes/8.jpg" alt="">
+                            <h2>Teatro de melancolia</h2>
+                            <h3>Tipo de evento: Teatro</h3>
+                            <h3>fecha: 22/05/2025</h3>
+                            <p>En este evento pudimos presenciar todo lo acontecido el dia ed ayer Lorem ipsum dolor sit </p>
+
+                        </div>
+                        <div class="eventos">
+                            <img src="imagenes/8.jpg" alt="">
+                            <h2>Teatro de melancolia</h2>
+                            <h3>Tipo de evento: Teatro</h3>
+                            <h3>fecha: 22/05/2025</h3>
+                            <p>En este evento pudimos presenciar todo lo acontecido el dia ed ayer Lorem ipsum dolor sit </p>
+
+                        </div>
+                        <div class="eventos">
+                            <img src="imagenes/8.jpg" alt="">
+                            <h2>Teatro de melancolia</h2>
+                            <h3>Tipo de evento: Teatro</h3>
+                            <h3>fecha: 22/05/2025</h3>
+                            <p>En este evento pudimos presenciar todo lo acontecido el dia ed ayer Lorem ipsum dolor sit </p>
+
+                        </div>
+                        <div class="eventos">
+                            <img src="imagenes/8.jpg" alt="">
+                            <h2>Teatro de melancolia</h2>
+                            <h3>Tipo de evento: Teatro</h3>
+                            <h3>fecha: 22/05/2025</h3>
+                            <p>En este evento pudimos presenciar todo lo acontecido el dia ed ayer Lorem ipsum dolor sit </p>
+
+                        </div>
+                        <div class="eventos">
+                            <img src="imagenes/8.jpg" alt="">
+                            <h2>Teatro de melancolia</h2>
+                            <h3>Tipo de evento: Teatro</h3>
+                            <h3>fecha: 22/05/2025</h3>
+                            <p>En este evento pudimos presenciar todo lo acontecido el dia ed ayer Lorem ipsum dolor sit </p>
+
+                        </div>
+                        <div class="eventos">
+                            <img src="imagenes/8.jpg" alt="">
+                            <h2>Teatro de melancolia</h2>
+                            <h3>Tipo de evento: Teatro</h3>
+                            <h3>fecha: 22/05/2025</h3>
+                            <p>En este evento pudimos presenciar todo lo acontecido el dia ed ayer Lorem ipsum dolor sit </p>
+
+                        </div>
+                        <div class="eventos">
+                            <img src="imagenes/8.jpg" alt="">
+                            <h2>Teatro de melancolia</h2>
+                            <h3>Tipo de evento: Teatro</h3>
+                            <h3>fecha: 22/05/2025</h3>
+                            <p>En este evento pudimos presenciar todo lo acontecido el dia ed ayer Lorem ipsum dolor sit </p>
+
+                        </div>
+                        <div class="eventos">
+                            <img src="imagenes/8.jpg" alt="">
+                            <h2>Teatro de melancolia</h2>
+                            <h3>Tipo de evento: Teatro</h3>
+                            <h3>fecha: 22/05/2025</h3>
+                            <p>En este evento pudimos presenciar todo lo acontecido el dia ed ayer Lorem ipsum dolor sit </p>
+
+                        </div>
+                        <div class="eventos">
+                            <img src="imagenes/8.jpg" alt="">
+                            <h2>Teatro de melancolia</h2>
+                            <h3>Tipo de evento: Teatro</h3>
+                            <h3>fecha: 22/05/2025</h3>
+                            <p>En este evento pudimos presenciar todo lo acontecido el dia ed ayer Lorem ipsum dolor sit </p>
+
+                        </div>
+                        <div class="eventos">
+                            <img src="imagenes/8.jpg" alt="">
+                            <h2>Teatro de melancolia</h2>
+                            <h3>Tipo de evento: Teatro</h3>
+                            <h3>fecha: 22/05/2025</h3>
+                            <p>En este evento pudimos presenciar todo lo acontecido el dia ed ayer Lorem ipsum dolor sit </p>
+
+                        </div>
+                        <div class="eventos">
+                            <img src="imagenes/8.jpg" alt="">
+                            <h2>Teatro de melancolia</h2>
+                            <h3>Tipo de evento: Teatro</h3>
+                            <h3>fecha: 22/05/2025</h3>
+                            <p>En este evento pudimos presenciar todo lo acontecido el dia ed ayer Lorem ipsum dolor sit </p>
+
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+                <div class="month">
+                    <h2>Febrero 2025</h2>
+                    <div class="arrow_down" title="Flecha hacia abajo"><div class="arrow">&#x21E3;</div></div>
+                </div>  
+                <div class="month">
+                    <h2>Marzo 2025</h2>
+                    <div class="arrow_down" title="Flecha hacia abajo"><div class="arrow">&#x21E3;</div></div>
+                </div>
+                <div class="month">
+                    <h2>Abril 2025</h2>
+                    <div class="arrow_down" title="Flecha hacia abajo"><div class="arrow">&#x21E3;</div></div>
+                </div>
+                <div class="month">
+                    <h2>Mayo 2025</h2>
+                    <div class="arrow_down" title="Flecha hacia abajo"><div class="arrow">&#x21E3;</div></div>
+                </div>
+                <div class="month">
+                    <h2>Junio 2025</h2>
+                    <div class="arrow_down" title="Flecha hacia abajo"><div class="arrow">&#x21E3;</div></div>
+                </div>
+                <div class="month">
+                    <h2>Julio 2025</h2>
+                    <div class="arrow_down" title="Flecha hacia abajo"><div class="arrow">&#x21E3;</div></div>
+                </div>
+                <div class="month">
+                    <h2>Agosto 2025</h2>
+                    <div class="arrow_down" title="Flecha hacia abajo"><div class="arrow">&#x21E3;</div></div>
+                </div>
+                <div class="month">
+                    <h2>Septiembre 2025</h2>
+                    <div class="arrow_down" title="Flecha hacia abajo"><div class="arrow">&#x21E3;</div></div>
+                </div>
+                <div class="month">
+                    <h2>Octubre 2025</h2>
+                    <div class="arrow_down" title="Flecha hacia abajo"><div class="arrow">&#x21E3;</div></div>
+                </div>
+                <div class="month">
+                    <h2>Noviembre 2025</h2>
+                    <div class="arrow_down" title="Flecha hacia abajo"><div class="arrow">&#x21E3;</div></div>
+                </div>
+                <div class="month">
+                    <h2>Diciembre 2025</h2>
+                    <div class="arrow_down" title="Flecha hacia abajo"><div class="arrow">&#x21E3;</div></div>
+                </div>
+
+            </div>
+        </section>
+
+       <section class="section">
+        <h2 class="titles">Servicios</h2>
+  <div class="carousel-container">
+    <div class="carousel-slide">
+      <div class="carousel-item" onclick="alert('Haz clic en la imagen 1')">
+        <img src="imagenes/exposicion.png" alt="Imagen 1">
+        <p class="overlay-text">Conoce nuestras exposiciones de arte y mucho mas en las visitas guiadas</p>
+      </div>
+      <div class="carousel-item" onclick="alert('Haz clic en la imagen 2')">
+        <img src="imagenes/cursos.jpeg" alt="Imagen 2">
+        <p class="overlay-text">Incribete en nuestros cursos</p>
+      </div>
+      <div class="carousel-item" onclick="alert('Haz clic en la imagen 3')">
+        <img src="imagenes/3.jpg" alt="Imagen 3">
+        <p class="overlay-text">Ofrecemos los mejores talleres de arte</p>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="titles">Ultimas noticias</h2>
+
+  <div class="slider">
+  <div class="slides-wrapper">
+    <!-- Slide 1 -->
+    <div class="container_all">
+      <div class="container_news">
+        <div class="news">
+          <h3>22/05/2025</h3>
+          <h2>Comprometidos con nuestro trabajo</h2>
+          <p>El 22 de mayo fue un día significativo para nuestra comunidad,ya que marcó el inicio de la tan esperada remodelación del Centro de Arte de Maracaibo Lia Bermúdez. Este emblemático espacio cultural, que ha sido un pilar en la promoción del arte y la cultura en la región, se someterá a una serie de renovaciones que buscan no solo modernizar sus instalaciones, sino también enriquecer la experiencia de los visitantes y artistas.</p>
+<p>La remodelación, que se espera que dure varios meses, incluye la actualización de las salas de exposición, la mejora de la infraestructura técnica y la creación de nuevos espacios para talleres y actividades culturales. Con un enfoque en la sostenibilidad y la accesibilidad, el proyecto también contempla la incorporación de tecnologías innovadoras que permitirán a los artistas y curadores presentar sus obras de manera más efectiva.</p>
+<p>El director del centro, en una reciente conferencia de prensa, expresó su entusiasmo por el inicio de este proyecto: "Estamos comprometidos con ofrecer un espacio que no solo sea un refugio para el arte, sino también un lugar donde la comunidad pueda interactuar, aprender y crecer. Esta remodelación es un paso importante hacia ese objetivo".</p>
+<p>La comunidad ha respondido con gran entusiasmo ante la noticia de la remodelación. Muchos ciudadanos han compartido sus recuerdos y experiencias en el centro, destacando la importancia que ha tenido en sus vidas. "El Lia Bermúdez ha sido un lugar donde he descubierto mi pasión por el arte. Estoy emocionado de ver cómo se transforma y se adapta a las necesidades de las nuevas generaciones", comentó un joven artista local.</p>
+
+
+        </div>
+        <div class="img-container">
+          <img src="imagenes/remodelacion.jpg" alt="">
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="container_all">
+      <div class="container_news">
+        <div class="news">
+          <h3>23/05/2025</h3>
+          <h2>Nuevo Taller de Arte</h2>
+          <p>Estamos emocionados de anunciar un nuevo taller de arte...</p>
+        </div>
+        <div class="img-container">
+          <img src="imagenes/CAMLB-9.jpg" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Flechas -->
+  <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+  <button class="next" onclick="changeSlide(1)">&#10095;</button>
+</div>
+
+</section>
+
+
+</main>
+
+    <!-- Pie de página con información de contacto y enlaces a redes sociales -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section contact-info">
+                <h3>Contacto</h3>
+                <p>Dirección: Av. 5 de Julio, Maracaibo, Venezuela</p>
+                <p>Teléfonos: +58 261 1234567 / +58 261 7654321</p>
+                <p>Email: contacto@liabermudez.com</p>
+                <p>Horario: Lunes a Viernes 9:00 - 18:00</p>
+            </div>
+<div class="footer-section social-media">
+    <h3>Síguenos</h3>
+    <div class="social-icons">
+        <a href="https://twitter.com" target="_blank" aria-label="Twitter"><img src="iconos/X 1.ico" alt="Twitter" /></a>
+        <a href="https://instagram.com" target="_blank" aria-label="Instagram"><img src="iconos/instagram-1.ico" alt="Instagram" /></a>
+        <a href="https://wa.me/1234567890" target="_blank" aria-label="WhatsApp"><img src="iconos/whatsapp-1.ico" alt="WhatsApp" /></a>
+        <a href="mailto:contacto@liabermudez.com" target="_blank" aria-label="Gmail"><img src="iconos/Gmail 1.ico" alt="Gmail" /></a>
+    </div>
+</div>
+            <div class="footer-section map">
+                <h3>Ubicación</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3921.2287968256965!2d-71.61440950889424!3d10.639325634647399!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e89985042953bcd%3A0x7622930db7e4b549!2sCentro%20de%20Arte%20de%20Maracaibo%20L%C3%ADa%20Berm%C3%BAdez!5e0!3m2!1ses-419!2sus!4v1746681559672!5m2!1ses-419!2sus" width="200" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="footer-section quick-links">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="Eventos y actividades/Eventos y Actividades.html">Eventos y Actividades</a></li>
+                    <li><a href="Eventos y actividades pasadas/Eventos y Actividades Pasadas.html">Eventos y Actividades Pasadas</a></li>
+                    <li><a href="Alquiler de la nave central/Alquiler de la Nave Central.html">Alquiler de la Nave Central</a></li>
+                    <li><a href="Exposiciones/Exposiciones de Arte.html">Exposiciones de Arte</a></li>
+                    <li><a href="Visitas Guiadas/Visitas Guiadas.html">Visitas Guiadas</a></li>
+                    <li><a href="Cursos/Cursos.html">Cursos</a></li>
+                    <li><a href="Talleres/talleres.html">Talleres</a></li>
+                    <li><a href="Historia del Centro de Arte.html">Historia del Centro de Arte</a></li>
+                    <li><a href="Sobre Nosotros/Sobre Nosotros.html">Sobre Nosotros</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón flotante para volver al inicio de la página -->
+    <button id="scrollTopBtn" title="Volver arriba">&#x21E3;</button>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
+
