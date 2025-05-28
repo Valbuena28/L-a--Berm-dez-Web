@@ -12,6 +12,72 @@
     <div class="logo">
     <a href="../index.html"><img src="../imagenes/logo 2.png" alt="Logo Centro de Arte Lía Bermúdez" /></a>
     </div>
+
+        <!-- Botón de menú hamburguesa -->
+<div class="menu-toggle" id="menu-toggle">
+    &#9776; <!-- ícono de tres barras -->
+</div>
+
+<!-- Menú lateral (sidebar) -->
+<div class="sidebar" id="sidebar">
+    <div class="logo-menu">
+        <img src="imagenes/logo 2.png" alt="Logo Centro de Arte Lía Bermúdez">
+    </div>
+    
+  <span class="close-btn" id="close-btn">&times;</span>
+  <ul class="sidebar-menu">
+    <li><a href="index.html">Inicio</a></li>
+
+    <li>
+      <details>
+        <summary class="toggle-submenu">Programación</summary>
+        <ul class="submenu">
+          <li><a href="#">Eventos y Actividades</a></li>
+          <li><a href="#">Eventos y Actividades Pasadas</a></li>
+        </ul>
+      </details>
+    </li>
+
+    <li>
+      <details>
+        <summary class="toggle-submenu">Nave Central</summary>
+        <ul class="submenu">
+          <li><a href="Alquiler de la nave central/Alquiler de la Nave Central.html">Alquiler de la Nave Central</a></li>
+        </ul>
+      </details>
+    </li>
+
+    <li>
+      <details>
+        <summary class="toggle-submenu">Exposiciones</summary>
+        <ul class="submenu">
+          <li><a href="Exposiciones/Exposiciones de Arte.html">Exposiciones de Arte</a></li>
+        </ul>
+      </details>
+    </li>
+
+    <li>
+      <details>
+        <summary class="toggle-submenu">Educación</summary>
+        <ul class="submenu">
+          <li><a href="Visitas Guiadas/Visitas Guiadas.html">Visitas Guiadas</a></li>
+          <li><a href="Cursos/Cursos.html">Cursos</a></li>
+          <li><a href="Talleres/talleres.html">Talleres</a></li>
+        </ul>
+      </details>
+    </li>
+
+    <li>
+      <details>
+        <summary class="toggle-submenu">El Centro De Arte</summary>
+        <ul class="submenu">
+          <li><a href="Historia el centro de arte/Historia del Centro de Arte.html">Historia del Centro de Arte</a></li>
+          <li><a href="Sobre Nosotros/Sobre Nosotros.html">Sobre Nosotros</a></li>
+        </ul>
+      </details>
+    </li>
+  </ul>
+</div>
     <nav class="nav-menu" id="intro-nav-menu">
         <ul class="nav-list">
             <li class="nav-item dropdown">
@@ -56,7 +122,61 @@
     </div>
     
         <main>
-            
+             <h2 class="title_guided_tours">VISITAS GUIADAS</h2>
+            <div class="container_guided_tours">
+               
+                <div class="img_container">
+                    <img src="../imagenes/CAMLB-3.jpg" alt="">
+                </div>
+                <div class="title">
+                    <h2>Recorre nuestro histórico centro de arte y conoce su fascinante historia</h2>
+                    <p>Te invitamos a recorrer nuestro emblemático Centro de Arte de Maracaibo Lia Bermúdez, un lugar donde la historia y la cultura se entrelazan en un fascinante viaje a través del tiempo. Este histórico edificio, que alguna vez fue un símbolo de la arquitectura regional, ha sido transformado en un espacio vibrante dedicado a la promoción y difusión del arte contemporáneo. Desde su inauguración, el Centro de Arte ha sido un punto de encuentro para artistas, curadores y amantes del arte, ofreciendo una plataforma para la creación y la reflexión. A medida que caminas por sus pasillos, podrás apreciar no solo las obras de destacados artistas locales e internacionales, sino también la rica historia que envuelve cada rincón de este lugar.</p>
+                </div>
+                <div class="list">
+                    <div>
+                          <h2>¿Qué incluye la visita guiada?</h2>
+                    <ul>
+                        <li>Recorrido por las salas de exposiciones temporales y permanentes.</li>
+                        <li>Acceso a la Nave Central, un espacio icónico del centro.</li>
+                        <li>Información sobre la historia del edificio y su transformación en centro cultural.</li>
+                        <li>Oportunidad de interactuar con obras de arte contemporáneo.</li>
+                        <li>Guía especializado que compartirá anécdotas y datos interesantes.</li>
+                    </ul>
+                    </div>
+                    <div>
+                        <h2>Horarios y Reservas</h2>
+                        <ul>
+                            <li>Visitas guiadas disponibles de lunes a viernes.</li>
+                            <li>Horarios: 10:00 AM, 12:00 PM, 2:00 PM y 4:00 PM.</li>
+                            <li>Duración aproximada de la visita: 1 hora.</li>
+                            <li>Reservas recomendadas con al menos 24 horas de antelación.</li>
+                            <li>Grupos de hasta 20 personas por visita.</li>
+                        </ul>
+                </div>
+            </div>
+               <div class="carousel">
+                    <h2>Previsualizacion de las areas del recorrido</h2>
+                    <div class="carousel-container">
+                        <div class="carousel-item active">
+                            <img src="../imagenes/2.jpg" alt="Imagen 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../imagenes/3.jpg" alt="Imagen 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../imagenes/4.jpg" alt="Imagen 3">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../imagenes/5.jpg" alt="Imagen 4">
+                        </div>
+                    </div>
+                    <button class="carousel-control prev" onclick="prevSlide()">&#10094;</button>
+                    <button class="carousel-control next" onclick="nextSlide()">&#10095;</button>
+                </div>
+
+               </div>
+            </div>
+
         </main>
     
         <footer class="footer">
