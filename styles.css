@@ -114,7 +114,7 @@ main {
 
 /* Estilos del logo */
 .logo img {
-    max-width: 150px; /* Ancho máximo del logo */
+    max-width: 160px; /* Ancho máximo del logo */
 }
 
 /* Estilos del menú de navegación */
@@ -186,7 +186,7 @@ main {
 /* Estilos para las secciones generales */
 .section {
     padding: 40px 20px;
-/* Línea divisoria */
+
 }
 
 /* Title inside intro section */
@@ -419,24 +419,6 @@ main {
 /**Fin del apartado de encabezado **/
 
 
-
-/* Responsive adjustments */
-@media (max-width: 1087px) {
-      /* Ajustes para el header */
-      .nav-list {
-        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
-        display: none;
-    }
-
-    .nav-item {
-        margin: 10px 0; /* Espaciado vertical entre elementos */
-    }
-
-    .nav-menu.active .nav-list {
-        display: flex; /* Mostrar el menú en pantallas pequeñas cuando está activo */
-    }
-    
-}
 @media (max-width: 768px) {
   
    
