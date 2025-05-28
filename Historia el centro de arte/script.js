@@ -19,11 +19,11 @@ buttons.forEach(button => {
     });
 });
 /* Este codigo es para que a la hora de clickear la imagen seleccione directamente el enlace y lo lleve al lugar*/
-document.querySelectorAll('.section').forEach(div =>{
+document.querySelectorAll('.section-etapas').forEach(div =>{
     div.addEventListener('click', () => {
         const link = div.querySelector('a');
         if(link){
-            link.click();
+            window.location.href = link.href;
         }
     });
 });
