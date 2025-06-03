@@ -8,9 +8,9 @@
 
 /* Estilos generales para el cuerpo de la página */
 body {
-    font-family: Arial; /* Fuente legible y común */
-    background-color: #000; /* Fondo negro */
-    color: #000; /* Texto negro */
+    font-family: tahoma; /* Fuente legible y común */
+    background-color: #100A05;
+    color: #fff;
     line-height: 1.6; /* Altura de línea para mejor lectura */
     /* Removed min-height: 200vh to allow footer positioning */
     display: flex;
@@ -112,7 +112,380 @@ main {
     border-radius: 10px;
 }
 
+/* Botón hamburguesa */
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.logo-menu{
+    width: 80px;
+    height: 40px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.logo-menu img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+
+   
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    height: 100%;
+    width: 250px;
+    background-color: #000;
+    padding-top: 60px;
+    transition: 0.3s;
+    z-index: 100;
+    overflow-y: auto;
+    display: none;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-menu li {
+    padding: 5px;
+    border-bottom: 1px solid #444;
+}
+
+.sidebar-menu a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    padding-left: 10px;
+}
+
+.sidebar-menu a:hover {
+    background-color: #ffee00bd;
+    color: #000;
+    border-radius: 25px;
+}
+
+/* Botón de cerrar */
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #fff;
+}
+
+
+.sidebar summary.toggle-submenu {
+  cursor: pointer;
+  color: #fff;
+  padding: 10px;
+  font-weight: bold;
+  list-style: none;
+  position: relative;
+}
+
+.sidebar summary.toggle-submenu:hover {
+  background-color: #ffee00bd;
+  color: #000;
+  border-radius: 25px;
+}
+
+.sidebar summary.toggle-submenu::marker {
+  display: none; /* Oculta la flecha nativa */
+}
+
+.sidebar summary.toggle-submenu::after {
+  content: "▸";
+  position: absolute;
+  right: 15px;
+  transition: transform 0.3s ease;
+}
+
+.sidebar details[open] summary.toggle-submenu::after {
+  transform: rotate(90deg);
+}
+
+.sidebar .submenu {
+  padding-left: 20px;
+  background-color: #000;
+  
+}
+
+.sidebar .submenu li {
+  
+  list-style: none;
+}
+
+.sidebar .submenu a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+}
+
+.sidebar .submenu a:hover {
+  color: #000;
+}
+
 /**COLOCA AQUI EL ESTILO DEL MAIN**/
+
+/**Todo sobre el main visitas guiadas**/
+.container_guided_tours {
+    max-width: 1800px;
+    margin: auto;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "img title"
+        "list list"
+        "carousel carousel";
+    gap: 20px;
+    
+}
+
+/* Asignación de áreas específicas */
+.img_container {
+    grid-area: img;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    
+}
+.img_container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra todo el contenedor */
+}
+
+.title {
+    grid-area: title;
+   
+}
+
+.list {
+    grid-area: list;
+    display: flex;
+    gap: 20px; /* separa las dos secciones internas */
+    flex-wrap: wrap; /* permite que se adapten en pantallas más pequeñas */
+    justify-content:center;
+   
+}
+
+.carousel {
+    grid-area: carousel;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 800px;
+    
+}
+
+.carousel-container {
+    display: flex;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
+}
+
+.carousel-item {
+    flex: 0 0 100%; /* cada slide ocupa el 100% exacto del ancho visible */
+    max-width: 100%;
+    height: auto;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s;
+}
+
+.carousel-control:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
+
+/* Título principal */
+.title_guided_tours {
+    font-size: 2rem;
+    text-align: center;
+    margin: auto;
+    border-bottom: 3px solid #ffee0077; /* amarillo dorado */
+    width: 80%;
+    padding-bottom: 10px;
+    color: #fff;
+}
+
+/* Títulos internos */
+.title h2,
+.list h2,
+.carousel h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    border-bottom: 3px solid #ffee0077;
+    display: inline-block;
+    padding-bottom: 5px;
+    color: #fff;
+}
+
+/* Texto principal */
+.title p,
+.list ul {
+    font-size: 1.2rem;
+    text-align: justify;
+    margin-top: 10px;
+}
+
+/* Listas */
+.list ul {
+    padding-left: 20px;
+}
+
+.list li {
+    margin-bottom: 8px;
+}
+
+/* Mejora visual para secciones */
+.title,
+.list > div,
+.carousel {
+    
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+/* RESPONSIVE GENERAL */
+
+@media (max-width: 1200px) {
+    .container_guided_tours {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "img"
+            "title"
+            "list"
+            "carousel";
+    }
+
+    .img_container {
+        height: 400px;
+    }
+
+    .carousel {
+        height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .title_guided_tours {
+        font-size: 1.8rem;
+        width: 90%;
+    }
+
+    .title h2,
+    .list h2,
+    .carousel h2 {
+        font-size: 1.4rem;
+    }
+     .carousel,
+    .carousel-item img {
+        height: 500px;
+    }
+
+    .title p,
+    .list ul {
+        font-size: 1rem;
+    }
+
+    .img_container {
+        height: 300px;
+    }
+
+    .carousel {
+        height: 300px;
+    }
+
+    .carousel-control {
+        font-size: 2.2rem;
+        padding: 6px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title_guided_tours {
+        font-size: 1.5rem;
+        padding-bottom: 6px;
+    }
+
+    .title h2,
+    .list h2,
+    .carousel h2 {
+        font-size: 1.2rem;
+        padding-bottom: 4px;
+    }
+
+    .title p,
+    .list ul {
+        font-size: 0.95rem;
+    }
+
+    .list {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+       .carousel,
+    .carousel-item img {
+        height: 250px;
+    }
+
+    .img_container {
+        height: 250px;
+    }
+
+    .carousel-control {
+        font-size: 2rem;
+        padding: 5px 10px;
+    }
+}
+
+
+
+
+
+
+
+/**Fin del main de visitas guiadas**/
 
 
 
@@ -275,21 +648,19 @@ main {
     }
 }
 
-@media (max-width: 1095px) {
-    /* Ajustes para el header */
-    .nav-list {
-      flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
-      display: none;
-  }
 
-  .nav-item {
-      margin: 10px 0; /* Espaciado vertical entre elementos */
-  }
+/**Mediar queryes de el menu hamburguesa**/
+@media (max-width: 1087px) {
+      .nav-menu {
+        display: none;
+    }
+    .sidebar {
+        display: block;
+    }
 
-  .nav-menu.active .nav-list {
-      display: flex; /* Mostrar el menú en pantallas pequeñas cuando está activo */
-  }
-  
+    .menu-toggle {
+        display: block;
+    }
+    
 }
-
 /**FIN DE MEDIA QUERYES**/

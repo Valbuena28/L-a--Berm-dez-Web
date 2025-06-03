@@ -1,4 +1,3 @@
-
 /* Reset y estilos base para todos los elementos */
 * {
     margin: 0;
@@ -9,8 +8,8 @@
 /* Estilos generales para el cuerpo de la página */
 body {
     font-family: Arial; /* Fuente legible y común */
-    background-color: #000; /* Fondo negro */
-    color: #000; /* Texto negro */
+    background-color: #100A05; /* Fondo negro */
+    color: #333; /* Texto negro */
     line-height: 1.6; /* Altura de línea para mejor lectura */
     /* Removed min-height: 200vh to allow footer positioning */
     display: flex;
@@ -112,350 +111,100 @@ main {
     border-radius: 10px;
 }
 
-/* Botón hamburguesa */
-.menu-toggle {
-    display: none;
-    font-size: 30px;
-    color: #fff;
-    cursor: pointer;
-    padding: 10px;
-}
-
-.logo-menu{
-    width: 80px;
-    height: 40px;
-    position: absolute;
-    top: 10px;
-    left: 10px;
-}
-.logo-menu img{
-    width: 100%;
-    height: 100%;
-    object-fit: fill;
-
-   
-}
-
-/* Sidebar */
-.sidebar {
-    position: fixed;
-    top: 0;
-    left: -250px;
-    height: 100%;
-    width: 250px;
-    background-color: #000;
-    padding-top: 60px;
-    transition: 0.3s;
-    z-index: 100;
-    overflow-y: auto;
-    display: none;
-}
-
-.sidebar-menu {
-    list-style: none;
-    padding: 0;
-}
-
-.sidebar-menu li {
-    padding: 5px;
-    border-bottom: 1px solid #444;
-}
-
-.sidebar-menu a {
-    color: #fff;
-    text-decoration: none;
-    display: block;
-    padding: 10px;
-    padding-left: 10px;
-}
-
-.sidebar-menu a:hover {
-    background-color: #ffee00bd;
-    color: #000;
-    border-radius: 25px;
-}
-
-/* Botón de cerrar */
-.close-btn {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    font-size: 30px;
-    cursor: pointer;
-    color: #fff;
-}
-
-
-.sidebar summary.toggle-submenu {
-  cursor: pointer;
-  color: #fff;
-  padding: 10px;
-  font-weight: bold;
-  list-style: none;
-  position: relative;
-}
-
-.sidebar summary.toggle-submenu:hover {
-  background-color: #ffee00bd;
-  color: #000;
-  border-radius: 25px;
-}
-
-.sidebar summary.toggle-submenu::marker {
-  display: none; /* Oculta la flecha nativa */
-}
-
-.sidebar summary.toggle-submenu::after {
-  content: "▸";
-  position: absolute;
-  right: 15px;
-  transition: transform 0.3s ease;
-}
-
-.sidebar details[open] summary.toggle-submenu::after {
-  transform: rotate(90deg);
-}
-
-.sidebar .submenu {
-  padding-left: 20px;
-  background-color: #000;
-  
-}
-
-.sidebar .submenu li {
-  
-  list-style: none;
-}
-
-.sidebar .submenu a {
-  color: #fff;
-  text-decoration: none;
-  display: block;
-}
-
-.sidebar .submenu a:hover {
-  color: #000;
-}
-
-
-/* Responsive de el menu hamburguesa*/
-@media screen and (max-width: 1087px) {
-    .nav-menu {
-        display: none;
-    }
-    .sidebar {
-        display: block;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-}
-
-
 /**COLOCA AQUI EL ESTILO DEL MAIN**/
-.Main-box{
-    height: 140vh;
-    width: 100vw;
-    background: url("/imagenes/img-historia0.jpeg") center/cover no-repeat;
+#back-button {
+    position: absolute;
+    top: 6%;
+    left: 5%;
+    width: 6vw;
+    height: 10vh;
+    border-radius: 50%;
+    background-color: #ffee00bd;
     color: white;
-    overflow: hidden;
-}
-
-.titule{
-    padding-top: 3%;
-    padding-left: 3%;
-    font-size: clamp(2.5rem, 2.7vw, 2.7rem);
-
-}
-
-.subtitule{
-    padding-left: 3%;
-    font-size: clamp(1.5rem, 1.7vw, 1.7rem);
-}
-
-.First-img{
-    height: 30%;
-    width: 30%;
-    background: url("/imagenes/img-historia1.jpeg") center/cover no-repeat;
-    margin-left: 2.5rem;
-    border-radius: 10px;
-    margin-top: 1rem;
-}
-
-.carousel-container{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: -17%;
-    left: 58%;
-}
-
-.Rueda{
-    width: 70%;
-    height: 70%;
-    transition: transform 0.2s linear;
-    display: block;
-}
-
-.Box-blur{
-    width: 100%;
-    height: 40%;
-    backdrop-filter: blur(10px);
-    background-color: rgba(255, 255, 255, 0.05);
-    z-index: 1;
-    margin: 20px;
-    position: absolute;
-    top: 40%;
-    margin: 0;
-    pointer-events: none;
-    border-radius: 20px;
-}
-
-.Box-content{
-    position: relative;
-    z-index: 2;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.content{
-    height: 35vh;
-    width: 20vw;
-    margin-top: 10%;
-    border-radius: 20px;
-    transition: transform 0.6s ease, background 0.6s ease;
+    border: none;
     cursor: pointer;
-    pointer-events: all;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: background-color 0.3s ease;
+    z-index: 1000;
 }
 
-.num-c{
-    padding-left: 12rem;
-    font-size: 4rem;    
-}
-.tilt-c{
-    padding-left: 1rem;
-    padding-top: 4rem;
+.flecha{
+    padding-bottom: 20px;
+    font-size: clamp(2.5rem, 4vw, 3rem);
 }
 
-.c1{
-    background: linear-gradient(to top left, rgba(255, 196, 2, 0.5) 5%, transparent 30%),
-    black;
+#back-button:hover {
+    background-color: #ff9900ea;
 }
 
-.c1:hover{
-    background: linear-gradient(to top left, rgba(255, 196, 2, 0.5) 10%, transparent 45%),
-    black;
-    transform: scale(1.1);
+/* Contenedor principal centrado */
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  background-color: #222;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-top: 5px solid #ff9900ea;
+  border-right: 5px solid #ff9900ea;
 }
 
-.c2{
-    background: linear-gradient(to top left, rgba(255, 196, 2, 0.5) 5%, transparent 30%),
-    black;
+/* Imagen destacada */
+.img img{
+  width: 100%;
+  height: 130vh;
+  object-fit: cover;
+  border-radius: 5px;
 }
 
-.c2:hover{
-    background: linear-gradient(to top left, rgba(255, 196, 2, 0.5) 10%, transparent 45%),
-    black;
-    transform: scale(1.1);
+/* Título estilo titular de periódico */
+.title {
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  border-bottom: 5px solid #ffee00bd;
+  padding-bottom: 10px;
 }
 
-.c3{
-    background: linear-gradient(to top left, rgba(255, 196, 2, 0.5) 5%, transparent 30%),
-    black;
+/* Subinformación (fecha, lugar, duración) */
+.info {
+  font-size: 1em;
+  font-weight: normal;
+  margin: 5px 0;
+  font-family: 'Georgia', serif;
 }
 
-.c3:hover{
-    background: linear-gradient(to top left, rgba(255, 196, 2, 0.5) 10%, transparent 45%),
-    black;
-    transform: scale(1.1);
+/* Descripción */
+.text p {
+  text-align: justify;
+  line-height: 1.6;
+  margin-top: 15px;
+  font-size: 1.05em;
 }
 
-.c4{
-    background: linear-gradient(to top left, rgba(255, 196, 2, 0.5) 5%, transparent 30%),
-    black;
+/* Responsive: mejora legibilidad en móviles */
+@media (max-width: 600px) {
+  .container {
+    padding: 15px;
+    margin: 20px 10px;
+  }
+
+  .title {
+    font-size: 1.5em;
+  }
+
+  .text p {
+    font-size: 1em;
+  }
 }
 
-.c4:hover{
-    background: linear-gradient(to top left, rgba(255, 196, 2, 0.5) 10%, transparent 45%),
-    black;
-    transform: scale(1.1);
-}
-
-
-/* Media query para móviles (pantallas menores a 768px) */
-@media (max-width: 1024px) {
-    .Main-box { 
-        height: auto;
-        padding-bottom: 3rem;
-        background: url('/imagenes/img-historia0.jpeg') top/cover;
-    }
-
-    .titule,
-    .subtitule {
-        padding-left: 1rem;
-        text-align: center;
-    }
-
-    .First-img {
-        width: 80%;
-        height: 35vh;
-        margin: 3rem auto;
-        background: url('/imagenes/img-historia1.jpeg') top/cover;
-        border-radius: 10px;
-    }
-
-    .carousel-container {
-        position: relative;
-        top: 0;
-        left: 0;
-        width: 100%;
-        text-align: center;
-        margin: 1rem 0;
-    }
-
-    .Rueda {
-        width: 90%;
-        height: auto;
-        margin: 0 auto;
-    }
-
-    .Box-blur {
-        position: static;
-        width: 90%;
-        margin: 1rem auto;
-    }
-
-    .Box-content {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .content {
-        width: 90%;
-        height: auto;
-        margin-bottom: 1rem;
-    }
-
-    .num-c {
-        padding-left: 0;
-        text-align: center;
-        font-size: 2.5rem;
-    }
-
-    .tilt-c {
-        padding: 1rem;
-        text-align: center;
-    }
-}
-
-/** FIN DEL MAIN**/
 .footer {
     padding-top: 20px;
     margin-top: 0;
-    z-index: 10;
 }
 
 .footer {

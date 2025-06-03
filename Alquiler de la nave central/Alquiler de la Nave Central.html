@@ -9,7 +9,71 @@
 <body class="white-text-page">
 <div class="header">
 <div class="logo">
-<a href="index.html"><img src="../imagenes/logo 2.png" alt="Logo Centro de Arte Lía Bermúdez" /></a>
+<a href="../index.html"><img src="../imagenes/logo 2.png" alt="Logo Centro de Arte Lía Bermúdez" /></a>
+</div>
+  <!-- Botón de menú hamburguesa -->
+<div class="menu-toggle" id="menu-toggle">
+    &#9776; <!-- ícono de tres barras -->
+</div>
+
+<!-- Menú lateral (sidebar) -->
+<div class="sidebar" id="sidebar">
+  <span class="close-btn" id="close-btn">&times;</span>
+  <ul class="sidebar-menu">
+    <div class="logo-menu">
+        <img src="../imagenes/logo 2.png" alt="Logo Centro de Arte Lía Bermúdez">
+    </div>
+    <li><a href="index.html">Inicio</a></li>
+
+    <li>
+      <details>
+        <summary class="toggle-submenu">Programación</summary>
+        <ul class="submenu">
+          <li><a href="Eventos y actividades/Eventos y Actividades.html">Eventos y Actividades</a></li>
+          <li><a href="Eventos y actividades pasadas/Eventos y Actividades Pasadas.html">Eventos y Actividades Pasadas</a></li>
+        </ul>
+      </details>
+    </li>
+
+    <li>
+      <details>
+        <summary class="toggle-submenu">Nave Central</summary>
+        <ul class="submenu">
+          <li><a href="Alquiler de la nave central/Alquiler de la Nave Central.html">Alquiler de la Nave Central</a></li>
+        </ul>
+      </details>
+    </li>
+
+    <li>
+      <details>
+        <summary class="toggle-submenu">Exposiciones</summary>
+        <ul class="submenu">
+          <li><a href="Exposiciones/Exposiciones de Arte.html">Exposiciones de Arte</a></li>
+        </ul>
+      </details>
+    </li>
+
+    <li>
+      <details>
+        <summary class="toggle-submenu">Educación</summary>
+        <ul class="submenu">
+          <li><a href="Visitas Guiadas/Visitas Guiadas.html">Visitas Guiadas</a></li>
+          <li><a href="Cursos/Cursos.html">Cursos</a></li>
+          <li><a href="Talleres/talleres.html">Talleres</a></li>
+        </ul>
+      </details>
+    </li>
+
+    <li>
+      <details>
+        <summary class="toggle-submenu">El Centro De Arte</summary>
+        <ul class="submenu">
+          <li><a href="Historia el centro de arte/Historia del Centro de Arte.html">Historia del Centro de Arte</a></li>
+          <li><a href="Sobre Nosotros/Sobre Nosotros.html">Sobre Nosotros</a></li>
+        </ul>
+      </details>
+    </li>
+  </ul>
 </div>
 <nav class="nav-menu" id="intro-nav-menu">
     <ul class="nav-list">
@@ -61,9 +125,9 @@
     <div class="carousel" id="escenario-carousel">
         <button class="carousel-arrow left" aria-label="Previous Slide">&#10094;</button>
         <div class="carousel-images">
-            <img src="../imagenes/1.jpg" alt="Escenario Imagen 1" />
-            <img src="../imagenes/2.jpg" alt="Escenario Imagen 2" />
-            <img src="../imagenes/3.jpg" alt="Escenario Imagen 3" />
+            <img src="../imagenes/CAMLB-NAVE-CENTRAL.jpg" alt="Escenario Imagen 1" />
+            <img src="../imagenes/CAMLB-NAVE-CENTRAL2.jpg" alt="Escenario Imagen 2" />
+            <img src="../imagenes/CAMLB-NAVE-CENTRAL3.jpg" alt="Escenario Imagen 3" />
         </div>
         <button class="carousel-arrow right" aria-label="Next Slide">&#10095;</button>
         <div class="carousel-indicators">
@@ -73,44 +137,68 @@
         </div>
     </div>
 
+     <div class="information">
+    <p> El  Área de Artes Escénicas se ubica en la gran Nave Central del edificio, con1.300 mts2 plenos de luz que se filtra a través de la transparencia de la gran cúpula central de 19 mts de altura. Si quieres saber mas sobre su historia <a href="../Historia el centro de arte/Historia del Centro de Arte.html">Click aqui</a> </p>
+  </div>
+
     <!-- Translucent text cards below carousel -->
     <section class="info-cards">
         <div class="info-card">
             <h3>Condiciones Actuales</h3>
-            <p>Información sobre las condiciones actuales del espacio.</p>
+            <p>Actualmente se encuentra en mantenimiento</p>
         </div>
         <div class="info-card">
             <h3>Capacidad</h3>
-            <p>Detalles sobre la capacidad máxima permitida.</p>
+            <p>la capacidad maxima es de 500 personas</p>
         </div>
         <div class="info-card">
             <h3>Incluye</h3>
-            <p>Servicios y equipamiento incluidos en el alquiler.</p>
+            <p>Sistema sobre tarimas telescópicas, que permite tres tipos de configuraciones distintas, tanto de butacas como de escenario, según los requerimientos del espectáculo.</p>
         </div>
     </section>
 
     <!-- Reservation Availability and Booking Form -->
-    <section class="reservation-form-section">
-        <h2>Reserva la Nave Central</h2>
-        <form id="reservation-form" class="reservation-form" action="#" method="post" novalidate>
-            <div class="form-group">
-                <label for="name">Nombre Completo</label>
-                <input type="text" id="name" name="name" placeholder="Tu nombre completo" required />
-            </div>
-            <div class="form-group">
-                <label for="email">Correo Electrónico</label>
-                <input type="email" id="email" name="email" placeholder="tu@email.com" required />
-            </div>
-            <div class="form-group">
-                <label for="date">Fecha de Reserva</label>
-                <input type="date" id="date" name="date" required />
-            </div>
-            <div class="form-group">
-                <button type="submit" class="btn-submit">Reservar</button>
-            </div>
-            <div id="form-message" class="form-message" aria-live="polite"></div>
-        </form>
-    </section>
+  <section class="reservation-form-section">
+    <h2>Reserva la Nave Central</h2>
+    <form id="reservation-form" class="reservation-form" action="#" method="post" novalidate>
+        <div class="form-group">
+            <label for="name">Nombre Completo</label>
+            <input type="text" id="name" name="name" placeholder="Tu nombre completo" required />
+        </div>
+        <div class="form-group">
+            <label for="email">Correo Electrónico</label>
+            <input type="email" id="email" name="email" placeholder="tu@email.com" required />
+        </div>
+        <div class="form-group">
+            <label for="date">Fecha de Reserva</label>
+            <input type="date" id="date" name="date" required />
+        </div>
+        <div class="form-group">
+            <label for="event-type">Tipo de Evento</label>
+            <select id="event-type" name="event-type" required class="select-dropdown">
+                <option value="" disabled selected>Selecciona un tipo de evento</option>
+                <option value="conciertos">Conciertos</option>
+                <option value="ballet">Ballet</option>
+                <option value="graduation">Graduaciones</option>
+                <option value="teatro">Teatro</option>
+                <option value="danza-contemporanea">Danza Contemporánea</option>
+                <option value="desfiles">Desfiles</option>
+                <option value="performances">Performances</option>
+                <option value="congresos">Congresos</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="attendees">Número de Asistentes</label>
+            <input type="number" id="attendees" name="attendees" placeholder="Número de asistentes" min="1" max="500" required />
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn-submit">Reservar</button>
+        </div>
+        <div id="form-message" class="form-message" aria-live="polite"></div>
+    </form>
+</section>
+ 
+
     </main>
 
     <footer class="footer">
