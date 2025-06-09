@@ -5,10 +5,18 @@
     box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'Poppins';
+  src: url('fonts/Poppins-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+
 /* Estilos generales para el cuerpo de la página */
 body {
-    font-family: tahoma; /* Fuente legible y común */
-    background-color: #100A05; /* Fondo negro */
+    font-family: "Tahoma"; /* Fuente legible y común */
+    background-color: #100A05 ; /* Fondo negro */
     line-height: 1.6; /* Altura de línea para mejor lectura */
     /* Removed min-height: 200vh to allow footer positioning */
     display: flex;
@@ -23,11 +31,6 @@ main {
     flex-grow: 1;
 }
 
-/**Estilos de la pantalla con el nombre del Lia Bermudez**/
-.lia-bermudez {
-    font-size: 3.5rem;
-   
-}
   /* Ensure intro-video section and children are flush to top */
   #intro-video, #intro-video .slideshow-background, #intro-video .slideshow, #intro-video .overlay, #intro-video h1.intro-title {
     margin: 0;
@@ -36,7 +39,7 @@ main {
 }
 /* Make intro-video height fit viewport minus header */
 #intro-video {
-    height: calc(100vh - 72px);
+    height: calc(100dvh - 90px);
     overflow: hidden;
     position: relative;
     
@@ -69,7 +72,8 @@ main {
     left: auto;
     transform: none;
     color: white;
-    font-size: 3.5rem;
+    font-size: 3 rem;
+    line-height: 1.1;
     z-index: 11;
     margin: 0;
     padding: 20px 0;
@@ -100,7 +104,6 @@ main {
 .header {
     background-color: #000; /* Color de fondo del encabezado */
     font-weight: bold;
-    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2); /* Sombra para el encabezado */
     padding: 5px; /* Espaciado interno */
     width: 100%;
     display: flex; /* Usar flexbox para alinear elementos */
@@ -186,7 +189,7 @@ main {
 /* Estilos para las secciones generales */
 .section {
     padding: 40px 20px;
-
+/* Línea divisoria */
 }
 
 /* Title inside intro section */
@@ -199,7 +202,7 @@ main {
     position: relative;
     background-color: rgba(0,0,0,0.5);
     padding: 10px 0;
-    line-height: 1.1;
+    
 }
 
 /* Slideshow background container */
@@ -329,6 +332,104 @@ main {
     overflow-y: auto;
     display: none;
 }
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-menu li {
+    padding: 5px;
+    border-bottom: 1px solid #444;
+}
+
+.sidebar-menu a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    padding-left: 10px;
+}
+
+.sidebar-menu a:hover {
+    background-color: #ffee00bd;
+    color: #000;
+    border-radius: 25px;
+}
+
+/* Botón de cerrar */
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #fff;
+}
+
+
+.sidebar summary.toggle-submenu {
+  cursor: pointer;
+  color: #fff;
+  padding: 10px;
+  font-weight: bold;
+  list-style: none;
+  position: relative;
+}
+
+.sidebar summary.toggle-submenu:hover {
+  background-color: #ffee00bd;
+  color: #000;
+  border-radius: 25px;
+}
+
+.sidebar summary.toggle-submenu::marker {
+  display: none; /* Oculta la flecha nativa */
+}
+
+.sidebar summary.toggle-submenu::after {
+  content: "▸";
+  position: absolute;
+  right: 15px;
+  transition: transform 0.3s ease;
+}
+
+.sidebar details[open] summary.toggle-submenu::after {
+  transform: rotate(90deg);
+}
+
+.sidebar .submenu {
+  padding-left: 20px;
+  background-color: #000;
+  
+}
+
+.sidebar .submenu li {
+  
+  list-style: none;
+}
+
+.sidebar .submenu a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+}
+
+.sidebar .submenu a:hover {
+  color: #000;
+}
+
+/**Fin del apartado de encabezado **/
+
+
+
+/* Responsive adjustments */
+@media (max-width: 1087px) {
+      /* Ajustes para el header */
+      .nav-list {
+        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+        display: none;
+    }
 
 .sidebar-menu {
     list-style: none;
@@ -746,174 +847,105 @@ body.eventos-actividades-pasadas main {
 
 
 
-/* Simple calendar styles */
-.calendar {
-    max-width: 90%;
-    margin: 20px auto;
-    border: 1px solid #ccc;
-    background: #fafafaab;
-    border-radius: 8px;
-    padding: 10px;
-    backdrop-filter: blur(10px);
-    
-}
-.calendar-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-}
-.calendar-header button {
-    background: #000;
-    color: #fff;
-    border: none;
-    padding: 6px 12px;
-    cursor: pointer;
-    border-radius: 4px;
-}
-.calendar-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(0, 250px));
-    gap: 10px;
-    justify-content: center;
-    
-    
-}
+/* Estilos para el calendario */
+        .calendar {
+            max-width: 90%;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            background: #fafafaab;
+            border-radius: 8px;
+            padding: 10px;
+            backdrop-filter: blur(10px);
+        }
+        .calendar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .calendar-header button {
+            background: #000;
+            color: #fff;
+            border: none;
+            padding: 14px ;
+            cursor: pointer;
+            border-radius: 4px;
+        }
 
-.event-box {
-    background-color: #222;
-    border: 1px solid #444;
-    border-radius: 6px;
-    width: 100%;
-    padding: 15px;
-    color: white;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    transition: background-color 0.3s ease;
-    box-sizing: border-box;
-}
-.event-box:hover {
-    background-color: #100A05;
-    color: #ffee0077;
-    box-shadow: 0 0 10px 10px #ffee0077;
-}
-.event-box img {
-    width: 100%;
-    height: 140px;
-    object-fit: cover;
-    border-radius: 4px;
-    margin-bottom: 12px;
-}
-.event-box h3 {
-    margin: 0;
-    font-size: 1.3rem;
-}
-.calendar-day {
-    text-align: center;
-    font-weight: bold;
-    padding: 8px 0;
-    background: #eee;
-    border-radius: 4px;
-    font-size: 1.1em;
-}
-.calendar-date {
-    height: 110px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    padding: 8px;
-    cursor: pointer;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    overflow: hidden;
-}
-.calendar-date.today {
-    background: #000;
-    color: #fff;
-}
-.day-number {
-    font-weight: bold;
-    font-size: 1.4em;
-}
-.event-indicator {
-    width: 10px;
-    height: 10px;
-    background: #f00;
-    border-radius: 50%;
-    position: absolute;
-    bottom: 8px;
-    right: 8px;
-}
-.event-list {
-    max-width: 900px;
-    margin: 20px auto;
-    background: #fff;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 10px;
-}
-.event-item {
-    border-bottom: 1px solid #ccc;
-    padding: 10px 0;
-    cursor: pointer;
-    font-size: 1em;
-}
-.event-item:last-child {
-    border-bottom: none;
-}
-.event-item:hover {
-    background: #f0f0f0;
-}
-.event-details {
-    max-width: 900px;
-    margin: 20px auto;
-    background: #fafafaab;
-    backdrop-filter: blur(10px);
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 20px;
-    display: none;
-    position: relative;
-    text-align: center;
-}
-.event-image {
-    max-width: 100%;
-    max-height: 250px;
-    margin-bottom: 15px;
-    border-radius: 6px;
-    object-fit: cover;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-.event-title {
-    font-size: 1.8em;
-    font-weight: bold;
-    margin-bottom: 15px;
-}
-.event-info {
-    text-align: left;
-    max-width: 600px;
-    margin: 0 auto 20px auto;
-    font-size: 1.1em;
-    line-height: 1.4;
-}
-.ver-mas-btn {
-    background-color: #000;
-    color: #fff;
-    border: none;
-    padding: 12px 24px;
-    cursor: pointer;
-    border-radius: 4px;
-    font-size: 1.1em;
-    display: block;
-    margin: 0 auto;
-}
+        .button{
+            font-size: 1.5rem;
+        }
+
+        #monthYear {
+            font-weight: bold;
+            font-size: 1.5rem;
+            font-family: Poppins;
+            color: #000;
+            padding: 8px 16px;
+            user-select: none;
+        }
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 250px));
+            gap: 10px;
+            justify-content: center; 
+        }
+        .event-box {
+            background-color: #222;
+            border: 2px solid #ffee00bd;
+            border-radius: 6px;
+            width: 100%;
+            padding: 10px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: background-color 0.3s ease;
+            box-sizing: border-box;
+        }
+        .event-box:hover {
+            background-color: #100A05;
+            
+        }
+        .event-box img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-bottom: 12px;
+        }
+        .event-box h3 {
+            margin-bottom: 4px;
+            font-size: 1.3rem;
+            color: #fff;
+            border-bottom: 2px solid #ffee00bd;
+        }
+        .event-box p {
+            margin: 1px;
+            font-size: 0.95rem;
+            color: #fff;
+            text-align: left;
+            width: 100%;
+        }
+        .ver-mas-btn {
+            border: 1px solid #ffee00bd;
+            background-color: transparent;
+            color: #fff;
+            padding: 8px 16px;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 1em;
+            margin-top: 12px;
+            width: 100%;
+        }
+
+        .ver-mas-btn:hover{
+            background-color: #ffee00bd;
+            color: #000;
+        }
+
+/*Fin del calendario*/
 
 /**Eventos y actividades pasadas**/
 .container{

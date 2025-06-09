@@ -40,243 +40,126 @@
 
             startInterval();
         });
+     /** Calendario de Eventos **/
+const calendarGrid = document.getElementById('calendarGrid');
+const monthYear = document.getElementById('monthYear');
+const prevMonthBtn = document.getElementById('prevMonth');
+const nextMonthBtn = document.getElementById('nextMonth');
 
-        const calendarGrid = document.getElementById('calendarGrid');
-        const monthYear = document.getElementById('monthYear');
-        const prevMonthBtn = document.getElementById('prevMonth');
-        const nextMonthBtn = document.getElementById('nextMonth');
-        const eventList = document.getElementById('eventList');
-        const eventDetails = document.getElementById('eventDetails');
-        const eventTitle = document.getElementById('eventTitle');
-        const eventInfo = document.getElementById('eventInfo');
-        const eventImage = document.getElementById('eventImage');
-        const verMasBtn = document.getElementById('verMasBtn');
+// 🔹 Siempre comenzamos el calendario con el día 1 del mes actual
+let currentDate = new Date();
+currentDate.setDate(1);
 
-        let currentDate = new Date();
-        const currentYear = currentDate.getFullYear();
-        const currentMonth = currentDate.getMonth(); // 0-based month index
-        const nextMonth = (currentMonth + 1) % 12;
-        const nextMonthYear = nextMonth === 0 ? currentYear + 1 : currentYear;
+let events = [];
 
-        // Updated events data with duration and place
-        const events = [
-            {
-                id: 1,
-                title: 'Taller de arte y creatividad',
-                date: new Date(currentYear, currentMonth, 5).toISOString().split('T')[0],
-                description: ' Te invitamos a disfrutar del Taller “Arte y Creatividad',
-                duration: 'De 9:30 am a 12:30 pm',
-                place: 'Sala de lectura',
-                image: 'imagenes/CAMLB-EVENTOS-1.jpg',
-                moreInfoUrl: '#'
-            },
-            {
-                id: 2,
-                title: 'Capitan Avispa',
-                date: new Date(currentYear, currentMonth, 12).toISOString().split('T')[0],
-                description: 'Te invitamos a disfrutar de esta emocionante pelicula',
-                duration: '3 pm',
-                place: 'CAM CAFE',
-                image: 'imagenes/CAMLB-EVENTOS-2.jpg',
-                moreInfoUrl: '#'
-            },
-            {
-                id: 3,
-                title: 'Festival de Danza',
-                date: new Date(currentYear, currentMonth, 18).toISOString().split('T')[0],
-                description: 'Celebración de la danza tradicional y contemporánea.',
-                duration: '3 horas',
-                place: 'Teatro Principal',
-                image: 'imagenes/3.jpg',
-                moreInfoUrl: '#'
-            },
-            {
-                id: 4,
-                title: 'Obra de Teatro Clásico',
-                date: new Date(currentYear, currentMonth, 25).toISOString().split('T')[0],
-                description: 'Revive los grandes clásicos del teatro mundial.',
-                duration: '2 horas',
-                place: 'Sala de Teatro',
-                image: 'imagenes/4.jpg',
-                moreInfoUrl: '#'
-            },
-            {
-                id: 5,
-                title: 'Conferencia de Arte',
-                date: new Date(nextMonthYear, nextMonth, 3).toISOString().split('T')[0],
-                description: 'Charlas y debates con expertos en arte.',
-                duration: '1.5 horas',
-                place: 'Sala de Conferencias',
-                image: 'imagenes/5.jpg',
-                moreInfoUrl: '#'
-            },
-            {
-                id: 6,
-                title: 'Taller de Escultura',
-                date: new Date(nextMonthYear, nextMonth, 10).toISOString().split('T')[0],
-                description: 'Aprende técnicas de escultura con profesionales.',
-                duration: '4 horas',
-                place: 'Taller de Arte',
-                image: 'imagenes/6.jpg',
-                moreInfoUrl: '#'
-            },
-            {
-                id: 7,
-                title: 'Concierto de Música Clásica',
-                date: new Date(nextMonthYear, nextMonth, 15).toISOString().split('T')[0],
-                description: 'Disfruta de las mejores piezas clásicas interpretadas en vivo.',
-                duration: '2 horas',
-                place: 'Auditorio Principal',
-                image: 'imagenes/7.jpg',
-                moreInfoUrl: '#'
-            },
-            {
-                id: 8,
-                title: 'Exposición Fotográfica',
-                date: new Date(nextMonthYear, nextMonth, 20).toISOString().split('T')[0],
-                description: 'Imágenes que capturan la esencia de la ciudad.',
-                duration: 'Todo el día',
-                place: 'Galería de Arte',
-                image: 'imagenes/8.jpg',
-                moreInfoUrl: '#'
-            },
-            {
-                id: 9,
-                title: 'Festival de Cine',
-                date: new Date(nextMonthYear, nextMonth, 25).toISOString().split('T')[0],
-                description: 'Proyecciones de películas independientes y clásicas.',
-                duration: '5 horas',
-                place: 'Sala de Cine',
-                image: 'imagenes/9.jpg',
-                moreInfoUrl: '#'
-            },
-            {
-                id: 10,
-                title: 'Concierto de Rock',
-                date: new Date(nextMonthYear, nextMonth, 28).toISOString().split('T')[0],
-                description: 'Una noche de rock con bandas locales.',
-                duration: '3 horas',
-                place: 'Escenario Exterior',
-                image: 'imagenes/10.jpg',
-                moreInfoUrl: '#'
-            }
-        ];
-
-        function renderCalendar(date) {
-            calendarGrid.innerHTML = '';
-            const year = date.getFullYear();
-            const month = date.getMonth();
-
-            monthYear.textContent = date.toLocaleString('es-ES', { month: 'long', year: 'numeric' });
-
-            // Instead of days of week and day numbers, show only event boxes for the month
-            const filteredEvents = events.filter(ev => {
-                const evDate = new Date(ev.date);
-                return evDate.getFullYear() === year && evDate.getMonth() === month;
-            });
-
-            if (filteredEvents.length === 0) {
-                const noEvents = document.createElement('p');
-                noEvents.textContent = 'No hay eventos para este mes.';
-                calendarGrid.appendChild(noEvents);
-                return;
-            }
-
-            filteredEvents.forEach(ev => {
-                const eventBox = document.createElement('div');
-                eventBox.classList.add('event-box');
-
-                const img = document.createElement('img');
-                img.src = ev.image;
-                img.alt = ev.title;
-                eventBox.appendChild(img);
-
-                const title = document.createElement('h3');
-                title.textContent = ev.title;
-                eventBox.appendChild(title);
-
-                const dateElem = document.createElement('p');
-                dateElem.textContent = ev.date;
-                dateElem.style.margin = '4px 0 0 0';
-                dateElem.style.fontSize = '0.9rem';
-                dateElem.style.color = '#ccc';
-                eventBox.appendChild(dateElem);
-
-                eventBox.addEventListener('click', () => {
-                    showEventDetails(ev);
-                });
-
-                calendarGrid.appendChild(eventBox);
-            });
-        }
-
-        function renderEventList(year, month) {
-            // Clear previous events except title
-            eventList.querySelectorAll('.event-item').forEach(e => e.remove());
-
-            const filteredEvents = events.filter(ev => {
-                const evDate = new Date(ev.date);
-                return evDate.getFullYear() === year && evDate.getMonth() === month;
-            });
-
-            if (filteredEvents.length === 0) {
-                const noEvents = document.createElement('p');
-                noEvents.textContent = 'No hay eventos para este mes.';
-                eventList.appendChild(noEvents);
-                return;
-            }
-
-            filteredEvents.forEach(ev => {
-                const evItem = document.createElement('div');
-                evItem.classList.add('event-item');
-                evItem.textContent = `${ev.date} - ${ev.title}`;
-                evItem.addEventListener('click', () => {
-                    showEventDetails(ev);
-                });
-                eventList.appendChild(evItem);
-            });
-        }
-
-        function showEventDetails(event) {
-            eventTitle.textContent = event.title;
-            eventImage.src = event.image;
-            eventImage.alt = event.title;
-            eventInfo.innerHTML = `
-                <p><strong>Fecha:</strong> ${event.date}</p>
-                <p><strong>Descripción:</strong> ${event.description}</p>
-                <p><strong>Duración:</strong> ${event.duration}</p>
-                <p><strong>Lugar:</strong> ${event.place}</p>
-            `;
-            verMasBtn.onclick = () => {
-    localStorage.setItem('selectedEvent', JSON.stringify(event));
-    window.location.href = 'Eventos y actividades/Eventos y Actividades.html';
-};
-
-            eventDetails.style.display = 'block';
-            eventList.style.display = 'none';
-            calendarGrid.style.display = 'none';
-        }
-
-        // Remove close button event listener since button is removed
-
-        // Close event details when mouse leaves the event details section
-        eventDetails.addEventListener('mouseleave', () => {
-            eventDetails.style.display = 'none';
-            eventList.style.display = 'block';
-            calendarGrid.style.display = 'grid';
+// 🔹 Obtener eventos desde la base de datos
+function fetchEventsFromDatabase() {
+    fetch('getEventos.php') // Asegúrate de que esta ruta sea correcta en tu servidor
+        .then(response => response.json())
+        .then(data => {
+            events = data.map(ev => ({
+                id: ev.id,
+                title: ev.title,
+                date: ev.date,
+                tipe: ev.tipe,
+                description: ev.description,
+                duration: ev.duration,
+                place: ev.place,
+                image: ev.image,
+            }));
+            renderCalendar(currentDate); // Solo renderiza cuando ya cargaron los eventos
+        })
+        .catch(error => {
+            console.error('Error al cargar los eventos:', error);
+            calendarGrid.innerHTML = '<p>Error al cargar los eventos.</p>';
         });
+}
 
-        prevMonthBtn.addEventListener('click', () => {
-            currentDate.setMonth(currentDate.getMonth() - 1);
-            renderCalendar(currentDate);
-        });
+// 🔹 Mostrar calendario del mes actual
+function renderCalendar(date) {
+    calendarGrid.innerHTML = '';
+    const year = date.getFullYear();
+    const month = date.getMonth();
 
-        nextMonthBtn.addEventListener('click', () => {
-            currentDate.setMonth(currentDate.getMonth() + 1);
-            renderCalendar(currentDate);
-        });
+    // Mostrar el mes y año en texto
+    monthYear.textContent = date.toLocaleString('es-ES', { month: 'long', year: 'numeric' });
 
-        renderCalendar(currentDate);
+    // Filtrar los eventos del mes actual
+    const filteredEvents = events.filter(ev => {
+        const evDate = new Date(ev.date);
+        return evDate.getFullYear() === year && evDate.getMonth() === month;
+    });
+
+    // Si no hay eventos
+    if (filteredEvents.length === 0) {
+        const noEvents = document.createElement('p');
+        noEvents.textContent = 'No hay eventos para este mes.';
+        calendarGrid.appendChild(noEvents);
+        return;
+    }
+
+    // Mostrar cada evento
+    filteredEvents.forEach(ev => {
+        const eventBox = document.createElement('div');
+        eventBox.classList.add('event-box');
+
+        const img = document.createElement('img');
+        img.src = ev.image;
+        img.alt = ev.title;
+        eventBox.appendChild(img);
+
+        const title = document.createElement('h3');
+        title.textContent = ev.title;
+        eventBox.appendChild(title);
+
+        const dateElem = document.createElement('p');
+        dateElem.textContent = `Fecha: ${ev.date}`;
+        eventBox.appendChild(dateElem);
+
+        const tipeElem = document.createElement('p');
+        tipeElem.textContent = `Tipo de evento: ${ev.tipe}`;
+        eventBox.appendChild(tipeElem);
+
+        const durationElem = document.createElement('p');
+        durationElem.textContent = `Duración: ${ev.duration}`;
+        eventBox.appendChild(durationElem);
+
+        const placeElem = document.createElement('p');
+        placeElem.textContent = `Lugar: ${ev.place}`;
+        eventBox.appendChild(placeElem);
+
+        const verMasBtn = document.createElement('button');
+        verMasBtn.classList.add('ver-mas-btn');
+        verMasBtn.textContent = 'Ver más';
+        verMasBtn.onclick = () => {
+            localStorage.setItem('selectedEvent', JSON.stringify(ev));
+            window.location.href = "Eventos y actividades/Eventos y Actividades.html";
+        };
+        eventBox.appendChild(verMasBtn);
+
+        calendarGrid.appendChild(eventBox);
+    });
+}
+
+// 🔹 Navegación entre meses
+prevMonthBtn.addEventListener('click', () => {
+    // Crear nuevo objeto Date sin modificar currentDate directamente
+    const newDate = new Date(currentDate.getFullYear(), currentDate.getMonth() - 1, 1);
+    currentDate = newDate;
+    renderCalendar(currentDate);
+});
+
+nextMonthBtn.addEventListener('click', () => {
+    const newDate = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 1);
+    currentDate = newDate;
+    renderCalendar(currentDate);
+});
+
+// 🔹 Inicializar calendario
+fetchEventsFromDatabase();
+
+
+        /**Fin del calendario de eventos**/
 
         (function() {
             const scrollTopBtn = document.getElementById('scrollTopBtn');
