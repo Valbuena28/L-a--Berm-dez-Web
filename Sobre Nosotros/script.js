@@ -21,3 +21,20 @@ rueda.addEventListener("mouseleave", () => {
     cancelAnimationFrame(animationFrame);
 });
 
+const seccionesEtapas = document.querySelectorAll('.section-etapas');
+const contenidosEtapas = document.querySelectorAll('.contenido');
+
+seccionesEtapas.forEach(seccion => {
+    seccion.addEventListener('click', () => {
+        const etapa = seccion.getAttribute('data-etapa');
+
+        // Oculta todos los contenidos
+        contenidosEtapas.forEach(contenido => {
+            contenido.classList.remove('activo');
+        });
+
+        // Muestra el contenido correspondiente
+        const contenidoActivo = document.getElementById(`contenido${etapa}`);
+        contenidoActivo.classList.add('activo');
+    });
+});

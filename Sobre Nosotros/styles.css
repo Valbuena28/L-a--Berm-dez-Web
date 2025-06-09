@@ -114,7 +114,7 @@ main {
 
 /**COLOCA AQUI EL ESTILO DEL MAIN**/
 .Main-box{
-    height: 140vh;
+    height: 170vh;
     width: 100vw;
     background: url("/imagenes/img-historia0.jpeg") center/cover no-repeat;
     color: white;
@@ -134,9 +134,9 @@ main {
 }
 
 .First-img{
-    height: 30%;
+    height: 25%;
     width: 30%;
-    background: url("/imagenes/img-historia1.jpeg") center/cover no-repeat;
+    background: url("/imagenes/img-historia1.jpeg") top/cover no-repeat;
     margin-left: 2.5rem;
     border-radius: 10px;
     margin-top: 1rem;
@@ -144,28 +144,30 @@ main {
 
 .carousel-container{
     width: 100%;
-    height: 100%;
+    height: auto;
     position: absolute;
-    top: -17%;
-    left: 58%;
+    top: -10%;
+    left: 55%;
 }
 
 .Rueda{
-    width: 70%;
-    height: 70%;
+    width: 80vw;    
+    height: auto;
     transition: transform 0.2s linear;
     display: block;
+    max-width: 1920px;
+    max-height: 1080px;
 }
 
 .Box-blur{
     width: 100%;
-    height: 40%;
+    height: 60%;
     backdrop-filter: blur(10px);
     background-color: rgba(255, 255, 255, 0.05);
     z-index: 1;
     margin: 20px;
     position: absolute;
-    top: 40%;
+    top: 35%;
     margin: 0;
     pointer-events: none;
     border-radius: 20px;
@@ -183,20 +185,79 @@ main {
 .content{
     height: 35vh;
     width: 20vw;
-    margin-top: 10%;
+    margin-top: 5%;
     border-radius: 20px;
     transition: transform 0.6s ease, background 0.6s ease;
     cursor: pointer;
     pointer-events: all;
 }
 
+.Etapas-content{
+    max-width: 1900px;
+    max-height: 1900px;
+    height: 40vh;
+}
+ 
+.contenido{
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 1.5s ease, transform 1.5s ease;
+    width: 70%;
+    height: auto;
+    background-color: #0f0000; 
+    box-shadow: 4px 4px 10px rgba(255,196,2,0.7);   
+    margin-top: 2%;
+    position: absolute;
+    margin-left: 14.6%;
+    border-radius: 20px;
+}
+
+.contenido.activo{
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    position: relative;
+}
+
+.tilt-etapas{
+    padding-top: 1%;
+    padding-left: 1%;
+    font-size: clamp(1rem , 1.5vw, 1.5rem)
+}
+
+.p-etapas{
+    padding-top: 1%;
+    padding-left: 1%;
+    padding-bottom: 2%;
+    max-width: 98%;
+    text-align: justify;
+    word-wrap: break-word;
+    line-height: 1.6;
+}
+
+.espacios{
+    display: inline-block;
+    margin-left: 1.75em;
+}
+
+.punto{
+left: 0;
+top: 0.4em;
+width: 10px;
+height: 10px;
+background-color:#ffee00bd;
+border-radius: 50%;
+display: inline-block;
+margin-right: 1rem;
+}
+
 .num-c{
-    padding-left: 12rem;
+    margin-left: 80%;
     font-size: 4rem;    
 }
 .tilt-c{
-    padding-left: 1rem;
-    padding-top: 4rem;
+    margin-left: 5%;
+    margin-top: 35%;
 }
 
 .c1{
